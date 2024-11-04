@@ -1,0 +1,6 @@
+---
+icon: ban
+---
+
+# Closed device
+

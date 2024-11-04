@@ -1,0 +1,104 @@
+# Table of contents
+
+* [Welcome to HardBreak](README.md)
+
+## Introduction
+
+* [What is Hardware Hacking?](introduction/what-is-hardware-hacking.md)
+* [Methodology](introduction/quickstart/README.md)
+  * [OSINT](introduction/quickstart/osint.md)
+* [Case Study](introduction/case-study.md)
+
+## Hardware Hacking
+
+* [Introduction](hardware-hacking/introduction.md)
+* [Basics](hardware-hacking/basics/README.md)
+  * [Tools](hardware-hacking/basics/tools/README.md)
+    * [Hardware Tools](hardware-hacking/basics/tools/hardware-tools/README.md)
+      * [Soldering Tools](hardware-hacking/basics/tools/hardware-tools/soldering-tools.md)
+      * [Logic Analyzer](hardware-hacking/basics/tools/hardware-tools/logic-analyzer/README.md)
+        * [Saleae Logic Analyzer](hardware-hacking/basics/tools/hardware-tools/logic-analyzer/saleae-logic-analyzer.md)
+      * [Open-Source Tools](hardware-hacking/basics/tools/hardware-tools/open-source-tools/README.md)
+        * [Bus Pirate](hardware-hacking/basics/tools/hardware-tools/open-source-tools/bus-pirate.md)
+        * [GoodFET](hardware-hacking/basics/tools/hardware-tools/open-source-tools/goodfet.md)
+      * [Multimeters & Oscilloscopes](hardware-hacking/basics/tools/hardware-tools/multimeters-and-oscilloscopes.md)
+      * [JTAG and SWD Debuggers](hardware-hacking/basics/tools/hardware-tools/jtag-and-swd-debuggers/README.md)
+        * [Segger JLink](hardware-hacking/basics/tools/hardware-tools/jtag-and-swd-debuggers/segger-jlink.md)
+        * [TI CC-Debugger](hardware-hacking/basics/tools/hardware-tools/jtag-and-swd-debuggers/ti-cc-debugger.md)
+      * [UART-to-TTL adapter](hardware-hacking/basics/tools/hardware-tools/uart-to-ttl-adapter.md)
+      * [Chip readers and programmers](hardware-hacking/basics/tools/hardware-tools/chip-readers-and-programmers/README.md)
+        * [Xgecu T56](hardware-hacking/basics/tools/hardware-tools/chip-readers-and-programmers/xgecu-t56.md)
+    * [Software Tools](hardware-hacking/basics/tools/software-tools/README.md)
+      * [Binwalk](hardware-hacking/basics/tools/software-tools/binwalk.md)
+      * [Firmwalker](hardware-hacking/basics/tools/software-tools/firmwalker.md)
+      * [flashrom](hardware-hacking/basics/tools/software-tools/flashrom.md)
+      * [Ghidra](hardware-hacking/basics/tools/software-tools/ghidra.md)
+      * [OpenOCD](hardware-hacking/basics/tools/software-tools/openocd.md)
+  * [Common Hardware Components](hardware-hacking/basics/common-hardware-components.md)
+* [Reconnaissance](hardware-hacking/reconnaissance/README.md)
+  * [Closed device](hardware-hacking/reconnaissance/closed-device/README.md)
+    * [USB Ports / SD-card](hardware-hacking/reconnaissance/closed-device/usb-ports-sd-card.md)
+  * [Opened device](hardware-hacking/reconnaissance/opened-device/README.md)
+    * [Board Analysis](hardware-hacking/reconnaissance/opened-device/board-analysis.md)
+* [Interface Interaction](hardware-hacking/interface-interaction/README.md)
+  * [UART](hardware-hacking/interface-interaction/uart/README.md)
+    * [Connect to UART](hardware-hacking/interface-interaction/uart/connect-to-uart.md)
+    * [Connect to UART- From start to finish](hardware-hacking/interface-interaction/uart/connect-to-uart-from-start-to-finish.md)
+    * [Extract Firmware using UART](hardware-hacking/interface-interaction/uart/extract-firmware-using-uart.md)
+  * [I2C](hardware-hacking/interface-interaction/i2c.md)
+  * [SPI](hardware-hacking/interface-interaction/spi/README.md)
+    * [Extract Firmware using SPI](hardware-hacking/interface-interaction/spi/extract-firmware-using-spi.md)
+  * [JTAG/SWD](hardware-hacking/interface-interaction/jtag-swd/README.md)
+    * [JTAG](hardware-hacking/interface-interaction/jtag-swd/jtag.md)
+    * [SWD](hardware-hacking/interface-interaction/jtag-swd/swd.md)
+    * [Extract Firmware using JTAG/SWD](hardware-hacking/interface-interaction/jtag-swd/extract-firmware-using-jtag-swd.md)
+  * [VE.Direct](hardware-hacking/interface-interaction/ve.direct.md)
+* [Bypassing Security](hardware-hacking/bypassing-security/README.md)
+  * [Voltage Glitiching](hardware-hacking/bypassing-security/voltage-glitiching/README.md)
+    * [Example: LPC1768](hardware-hacking/bypassing-security/voltage-glitiching/example-lpc1768.md)
+* [Analyze Firmware](hardware-hacking/analyze-firmware.md)
+
+## Network Analysis
+
+* [Introduction](network-analysis/introduction.md)
+* [Reconnaissance](network-analysis/reconnaissance.md)
+* [Protocols](network-analysis/protocols/README.md)
+  * [WIFI](network-analysis/protocols/wifi/README.md)
+    * [WEP](network-analysis/protocols/wifi/wep.md)
+    * [Deauthentication Attacks](network-analysis/protocols/wifi/deauthentication-attacks.md)
+  * [Application Layer](network-analysis/protocols/application-layer/README.md)
+    * [Proprietary Protocols](network-analysis/protocols/application-layer/proprietary-protocols/README.md)
+      * [Example: Parrot Anafi Drone](network-analysis/protocols/application-layer/proprietary-protocols/example-parrot-anafi-drone.md)
+    * [MQTT](network-analysis/protocols/application-layer/mqtt.md)
+    * [CoAP](network-analysis/protocols/application-layer/coap.md)
+    * [Web Sockets](network-analysis/protocols/application-layer/web-sockets.md)
+
+## Radio Hacking
+
+* [Introduction](radio-hacking/introduction.md)
+* [Reconnaissance](radio-hacking/reconnaissance.md)
+* [Protocols](radio-hacking/protocols/README.md)
+  * [NFC](radio-hacking/protocols/nfc.md)
+  * [RFID](radio-hacking/protocols/rfid.md)
+* [Tools](radio-hacking/tools/README.md)
+  * [RF Signal Analyzers](radio-hacking/tools/rf-signal-analyzers/README.md)
+    * [RTL-SDR](radio-hacking/tools/rf-signal-analyzers/rtl-sdr.md)
+    * [HackRF](radio-hacking/tools/rf-signal-analyzers/hackrf.md)
+  * [Flipper Zero](radio-hacking/tools/flipper-zero/README.md)
+    * [NFC](radio-hacking/tools/flipper-zero/nfc.md)
+    * [Sub-GHz](radio-hacking/tools/flipper-zero/sub-ghz.md)
+
+## Contribute
+
+* [How to contribute](contribute/how-to-contribute.md)
+* [Gitbook - Basics](contribute/gitbook-basics/README.md)
+  * [Markdown](contribute/gitbook-basics/markdown.md)
+  * [Images & media](contribute/gitbook-basics/images-and-media.md)
+  * [Interactive blocks](contribute/gitbook-basics/interactive-blocks.md)
+
+## About
+
+* [Impressum – Legal Notice](about/impressum-legal-notice.md)
+* [Privacy Policy](about/privacy-policy.md)
+* [Datenschutzerklärung](about/datenschutzerklarung.md)
+* [License](about/license.md)
