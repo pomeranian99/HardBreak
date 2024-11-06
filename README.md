@@ -25,7 +25,7 @@ _**This page is a free and open-source wiki about hardware hacking!**_
 
 <figure><img src=".gitbook/assets/image (16).png" alt="" width="155"><figcaption><p>HardBreak Wiki</p></figcaption></figure>
 
-The goal of this site is to collect knowledge about [Hardware Hacking](introduction/what-is-hardware-hacking.md) in one place. There are many great blogs about Hardware Hacking, but it is a rather unpleasant experience to search through multiple blogs in different formats to find the information you need. HardBreak aims to organize all information in one accessible and easy-to-use platform.
+The goal of HardBreak ([https://www.hardbreak.wiki/](https://www.hardbreak.wiki/)) is to collect knowledge about [Hardware Hacking](introduction/what-is-hardware-hacking.md) in one place. There are many great blogs about Hardware Hacking, but it is a rather unpleasant experience to search through multiple blogs in different formats to find the information you need. HardBreak aims to organize all information in one accessible and easy-to-use platform.
 
 ## How You Can Contribute
 
