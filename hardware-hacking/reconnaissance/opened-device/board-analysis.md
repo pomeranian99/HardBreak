@@ -17,7 +17,7 @@ What we are looking for:
 * places where we can communicate with the device
 * places where we can intercept communication
 
-The first step is to use a camera to take a high-quality picture of the PCB, so that you can label found components on it. Components of interest could be:
+These omponents of interest could be:
 
 {% tabs %}
 {% tab title="MCUs" %}
@@ -64,7 +64,7 @@ like Flash, EEPROM, RAM
 
     * Sometimes pins are directly exposed:
 
-    <figure><img src="broken-reference" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/test-pins.png" alt=""><figcaption><p>Header-pins exposed</p></figcaption></figure>
 
 
 * Sometimes there also available as golden/silver test pads:
@@ -89,7 +89,7 @@ Todos:
 {% endtab %}
 
 {% tab title="External Ports" %}
-This part should have been done before opening the device. Check "closed device" section.
+USB ports, Ethernet ports or SD card slots are also of interest for us. This part should have been done before opening the device. Check "[closed device](../closed-device/)" section.
 
 * Why it’s interesting
   * These ports are common attack vectors for injecting malicious payloads or gaining unauthorized access.
@@ -113,9 +113,9 @@ like Wi-Fi, Bluetooth, RF, ZigBee
 {% endtab %}
 {% endtabs %}
 
+I also recommend taking a high quality photo as soon as you open the device, as the printed model numbers can fade in daylight over time. You can then label the identified components on the picture, which will help you remember components you've already looked up.
 
-
-Pictures with labeled components then might look like this:
+Pictures with labeled components might look like this:
 
 <figure><img src="../../../.gitbook/assets/komplett-beschriftet (1).png" alt="" width="563"><figcaption><p>Labeled components</p></figcaption></figure>
 
