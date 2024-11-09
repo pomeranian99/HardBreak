@@ -29,8 +29,14 @@ Logic analyzers are indispensable for a variety of tasks in digital circuit debu
 ## Models
 
 * Entry-Level
-  * AZDelivery Logic Analyzer ($10) : very cheap one from Aliexpress for example, can be difficult to setup (driver problems etc.)
+  * AZDelivery Logic Analyzer ($10)
+    * very cheap one from Aliexpress for example, can be difficult to setup (driver problems etc.)
+    * Max sampling rate: 24MHz
 * Mid-Range
-  * innomaker LA1010 USB Logic Analyzer ($75): pulseview compatible and also use the Kingst proprietary software
+  * innomaker LA1010 USB Logic Analyzer ($75)
+    * pulseview compatible and also use the Kingst proprietary software
+    * Max sampling rate: 100MHz&#x20;
 * High-End
-  * Saleae Logic ($500-$1500): Frequently used by myself, very reliable, analog capture capability, highly user-friendly software
+  * Saleae Logic ($500-$1500)
+    * Frequently used by myself, very reliable, analog capture capability, highly user-friendly software
+    * Max sampling rate: 500MHz
