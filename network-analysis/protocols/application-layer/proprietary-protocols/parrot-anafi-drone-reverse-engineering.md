@@ -78,10 +78,10 @@ Notice, one does not need to change the MAC address to get these results. The An
 
 If we spam either the takeoff or landing command, the following attacks can be exploited:
 
-1. **Possible ATTACKS**
+1. **Possible Attacks**
    1. Prevent starts
       1. The next experiment was to spam the landing command constantly, with the result that the drone was unable to start using the controller. The drone’s rotors were spinning for a second but then the landing command was received and the Anafi stopped the starting process.
-   2. Prevent landing
+   2. Prevent landings
       1. The same result could be achieved with spamming the starting package. If one presses the landing button on the controller or phone the drone started to go down, but as soon as the starting package from the laptop came in the drone stopped the landing and stared to hovering above the ground again. As a result, the phone user was unable to land the drone properly.
 
 ## Summary
@@ -90,6 +90,6 @@ This case study shows why it is relevant to reverse network protocols when analy
 
 ## Resources
 
-Bachelor Thesis, Jonas Rosenberger
+Bachelor Thesis, Jonas Rosenberger (me)
 
 [https://www.parrot.com/en/drones/anafi](https://www.parrot.com/en/drones/anafi)
