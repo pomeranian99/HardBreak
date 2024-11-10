@@ -69,7 +69,7 @@
     * [Deauthentication Attacks](network-analysis/protocols/wifi/deauthentication-attacks.md)
   * [Application Layer](network-analysis/protocols/application-layer/README.md)
     * [Proprietary Protocols](network-analysis/protocols/application-layer/proprietary-protocols/README.md)
-      * [Example: Parrot Anafi Drone](network-analysis/protocols/application-layer/proprietary-protocols/example-parrot-anafi-drone.md)
+      * [Parrot Anafi Drone Reverse Engineering](network-analysis/protocols/application-layer/proprietary-protocols/parrot-anafi-drone-reverse-engineering.md)
     * [MQTT](network-analysis/protocols/application-layer/mqtt.md)
     * [CoAP](network-analysis/protocols/application-layer/coap.md)
     * [Web Sockets](network-analysis/protocols/application-layer/web-sockets.md)
