@@ -12,7 +12,7 @@ The resulting test setup may look like this:
 
 ## Packet Analysis
 
-Using Wireshark we can look at the packets, which are send during a landing and a starting sequence (picture shows just a snippet):
+Using Wireshark, we can look at the packets, which are send during a landing and a starting sequence (picture shows just a snippet):
 
 <figure><img src="../../../../.gitbook/assets/image (11).png" alt=""><figcaption><p>Example packet</p></figcaption></figure>
 
@@ -86,7 +86,7 @@ If we spam either the takeoff or landing command, the following attacks can be e
 
 ## Summary
 
-This case study shows why it is relevant to reverse network protocols when analyzing IoT devices. As an attacker, which has access to the Parrot Anafis WiFi network we can send unauthenticated packets to the drone and control its starts and landings. This can be done by any device, which can connect to WiFi networks.
+This case study shows why it is relevant to reverse network protocols when analyzing IoT devices. As an attacker, who has access to the Parrot Anafis WiFi network we can send unauthenticated packets to the drone and control its starts and landings. This can be done by any device, which can connect to WiFi networks.
 
 ## Resources
 
