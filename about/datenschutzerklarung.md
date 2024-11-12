@@ -13,8 +13,8 @@ Wie wir mit Ihren personenbezogenen Daten umgehen, erläutern wir Ihnen in diese
 * Kontaktaufnahme
 * Affiliate-Links
 * Umfragen
-* Kommentare
 * Weitere Drittdienste
+* Profile in sozialen Netzwerken
 * Rechte betroffener Personen
 
 ### Verantwortlicher <a href="#verantwortlicher" id="verantwortlicher"></a>
@@ -58,7 +58,7 @@ Bei jedem Aufruf unserer Webseite überträgt der Browser des Nutzers verschiede
 
 Die Verarbeitung dieser Daten ist erforderlich, um die Webseite an den Nutzer ausliefern zu können und für sein Endgerät zu optimieren. Die Speicherung in Logfiles dient der Verbesserung der Sicherheit unserer Webseite (z.B. Schutz vor DDOS-Angriffen).
 
-Rechtsgrundlage für die Verarbeitung ist Art. 6 Abs. 1 UAbs. 1 Buchst. f) DSGVO. Unser berechtigtes Interesse besteht in der Bereitstellung der Webseite und der Verbesserung der Webseitensicherheit. Logfiles werden nach 30 Tagen automatisch gelöscht.
+Rechtsgrundlage für die Verarbeitung ist Art. 6 Abs. 1 UAbs. 1 Buchst. f) DSGVO. Unser berechtigtes Interesse besteht in der Bereitstellung der Webseite und der Verbesserung der Webseitensicherheit. Logfiles werden nach 90 Tagen automatisch gelöscht.
 
 ### Cookies, Zählpixel und Mobile Identifier <a href="#cookies-zaehlpixel-und-mobile-identifier" id="cookies-zaehlpixel-und-mobile-identifier"></a>
 
@@ -102,12 +102,6 @@ Handelt es sich um eine Umfrage, die nicht personalisiert ist, bei der also wede
 
 Soweit wir eine Einwilligung des Nutzers einholen, ist Art. 6 Abs. 1 UAbs. 1 Buchst. a) DSGVO die Rechtsgrundlage der Verarbeitung. Im Übrigen beruht sie auf Art. 6 Abs. 1 UAbs. 1 Buchst. f) DSGVO. Unser berechtigtes Interesse besteht in der Verbesserung unseres Angebots wie auch unserer Produkte und Dienstleistungen.
 
-### Kommentare <a href="#kommentare" id="kommentare"></a>
-
-Auf unserer Webseite geben wir Nutzern die Möglichkeit, eigene Kommentare zu hinterlassen. Wenn ein Kommentar an uns übermittelt wird, verarbeiten wir die Angaben des Nutzers. Zum Schutz vor einem Missbrauch der Kommentarfunktion (z.B. durch Spam oder strafbare Inhalte) verarbeiten wir zusätzlich Datum, Uhrzeit und die IP-Adresse des Nutzers.
-
-Rechtsgrundlage für die Verarbeitung ist Art. 6 Abs. 1 UAbs. 1 Buchst. f) DSGVO. Unser berechtigtes Interesse besteht darin, die Kommentarfunktion anbieten zu können und uns vor einem Missbrauch zu schützen.
-
 ### Weitere Drittdienste <a href="#weitere-drittdienste" id="weitere-drittdienste"></a>
 
 **Google Analytics**
@@ -124,27 +118,28 @@ Die durch Google Analytics gesammelten Daten werden nach Ablauf von 14 Monaten a
 
 [Datenschutzerklärung von Google Analytics](https://policies.google.com/privacy?hl=de)
 
-**YouTube**
+**Google Tag Manager**
 
-Wir binden Videos von YouTube ein. Anbieter: Google Ireland Ltd., Google Building Gordon House, 4 Barrow St, Dublin, D04 E5W5, Irland. Dabei nutzen wir den erweiterten Datenschutzmodus, sodass YouTube das Nutzerverhalten nicht nachvollzieht, es sei denn der Nutzer sieht sich das Video an. Um Videos bereitstellen zu können ist es technisch notwendig, die IP-Adresse des Nutzers an YouTube zu übertragen.
+Zur Verwaltung unserer Webseiten-Tags nutzen wir den Google Tag Manager. Anbieter: Google Ireland Ltd., Google Building Gordon House, 4 Barrow St, Dublin, D04 E5W5, Irland
 
-Der Einsatz von YouTube erfolgt auf der Rechtsgrundlage von Art. 6 Abs. 1 UAbs. 1 Buchst. f) DSGVO. Unser berechtigtes Interesse besteht in der Verbesserung des Nutzungserlebnisses unserer Webseite und der Darstellung von Inhalten, die für unsere Nutzer interessant sind.
+Der Tag Manager ist eine cookielose Domain, der Tags verschiedener Anbieter auslöst, die ihrerseits Daten erfassen. Auf diese Daten greift der Google Tag Manager nicht zu. Um Tags auslösen zu können, ist es technisch notwendig, die IP-Adresse des Nutzers an Google zu übertragen.
 
-Sie können personalisierter Werbung durch Google jederzeit widersprechen, indem Sie das nachfolgende Opt-Out wahrnehmen.
+Der Einsatz des Google Tag Managers erfolgt auf der Rechtsgrundlage des Art. 6 Abs. 1 UAbs. 1 Buchst. f) DSGVO. Unser berechtigtes Interesse besteht in der vereinfachten Verwaltung von uns eingesetzter Drittdienste.
 
-[Opt-Out](https://adssettings.google.com/authenticated?hl=de)
+[Datenschutzerklärung von Google Tag Manager](https://policies.google.com/privacy?hl=de)
 
-[Datenschutzerklärung von YouTube](https://policies.google.com/privacy?hl=de)
+### Profile in sozialen Netzwerken <a href="#profile-in-sozialen-netzwerken" id="profile-in-sozialen-netzwerken"></a>
 
-**Google Fonts**
+Wir sind in einem oder mehreren sozialen Netzwerken präsent. Im Einzelnen handelt es sich um: Facebook, Instagram, Twitter oder LinkedIn. Bei einer Kontaktaufnahme verarbeiten wir personenbezogene Daten wie oben unter Kontaktaufnahme beschrieben.
 
-Auf unserer Webseite nutzen wir Google Fonts. Anbieter: Google Ireland Ltd., Google Building Gordon House, 4 Barrow St, Dublin, D04 E5W5, Irland.
+Die Anbieter von sozialen Netzwerken verarbeiten Daten entsprechend ihrer Datenschutzbestimmungen, die hier aufgerufen werden können:
 
-Schriftarten werden vom Google-Server geladen. Um eine Verbindung zum Server aufzubauen, ist es technisch notwendig, die IP-Adresse des Nutzers zu übertragen.
+* [Facebook](https://facebook.com/policy.php)
+* [Instagram](https://de-de.facebook.com/help/instagram/155833707900388)
+* [Twitter](https://twitter.com/de/privacy)
+* [LinkedIn](https://www.linkedin.com/legal/privacy-policy?\_l=de\_DE)
 
-Rechtsgrundlage der Verarbeitung ist Art. 6 Abs. 1 UAbs. 1 Buchst. f) DSGVO. Unser berechtigtes Interesse besteht in der Verkürzung von Ladezeiten und einer einheitlichen Darstellung auf unterschiedlichen Endgeräten.
-
-[Datenschutzerklärung von Google Fonts](https://policies.google.com/privacy?hl=de)
+Ist ein Nutzer mit seinem Account eingeloggt, können ihm die Aktivitäten auf unserem Profil in dem jeweiligen sozialen Netzwerk gegebenenfalls zugeordnet werden. Dies kann geräteübergreifend und ggf. auch ohne Login erfolgen, beispielsweise unter Verwendung von Cookies oder Mobile Identifiern. Die Anbieter sozialer Netzwerke erstellen anhand der gesammelten Daten pseudonymisierte Nutzerprofile, mit denen sie insbesondere personalisierte Werbung ausspielen können.
 
 ### Rechte betroffener Personen <a href="#rechte-betroffener-personen" id="rechte-betroffener-personen"></a>
 
@@ -166,4 +161,4 @@ Werden personenbezogene Daten des Nutzers verarbeitet, ist er betroffene Person 
 
 **Recht auf Beschwerde:** Die betroffene Person hat das Recht, sich bei einer Aufsichtsbehörde zu beschweren.
 
-**Stand der Datenschutzerklärung:** 02. November 2024
+**Stand der Datenschutzerklärung:** 12. November 2024
