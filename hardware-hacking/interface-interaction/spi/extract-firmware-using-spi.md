@@ -22,9 +22,11 @@ Let's say you find an external flash memory on a PCB: chances are good that it w
 {% tab title="Clamp" %}
 The quickest and easiest way to connect to a flash chip is by using a clamp, like these:
 
-%%%TODO: insert image %%%
+<figure><img src="../../../.gitbook/assets/IMG_8349.JPG" alt="" width="375"><figcaption><p>Clamps can be used to connect to pins on chip</p></figcaption></figure>
 
-Attach the clamp to the chip and the end to your programmer/debugger like the Xgecu T56.
+Attach the clamp to the chip and the end to your programmer/debugger like the Bus Pirate or an Xgecu T56.
+
+<figure><img src="../../../.gitbook/assets/IMG_8350.JPG" alt="" width="563"><figcaption><p>clamps connected to an SPI flash</p></figcaption></figure>
 {% endtab %}
 
 {% tab title="Soldering" %}
