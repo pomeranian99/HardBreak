@@ -22,7 +22,7 @@ If you are lucky, you find header pins where you can connect jumper cables to it
 
 If your device has holes in the pcb for the UART connection, you can attempt to put jumper cables through it and tilt them, so they have a solid contact point:
 
-<figure><img src="../../../.gitbook/assets/IMG_8347.JPG" alt="" width="375"><figcaption><p>Put the male pins through the connector holes</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/IMG_8347.JPG" alt="" width="375"><figcaption><p>Put the male pins through the connector holes<br></p></figcaption></figure>
 {% endtab %}
 
 {% tab title="Clamps" %}
