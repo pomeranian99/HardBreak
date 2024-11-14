@@ -6,8 +6,7 @@
 
 * [What is Hardware Hacking?](introduction/what-is-hardware-hacking.md)
 * [How to start](introduction/how-to-start.md)
-* [Methodology](introduction/quickstart/README.md)
-  * [OSINT](introduction/quickstart/osint.md)
+* [Methodology](introduction/quickstart.md)
 * [Case Study](introduction/case-study.md)
 
 ## Hardware Hacking
@@ -38,6 +37,7 @@
   * [Common Hardware Components](hardware-hacking/basics/common-hardware-components.md)
 * [Reconnaissance](hardware-hacking/reconnaissance/README.md)
   * [Closed device](hardware-hacking/reconnaissance/closed-device/README.md)
+    * [OSINT aka use Google](hardware-hacking/reconnaissance/closed-device/osint-aka-use-google.md)
     * [USB Ports / SD-card](hardware-hacking/reconnaissance/closed-device/usb-ports-sd-card.md)
   * [Opened device](hardware-hacking/reconnaissance/opened-device/README.md)
     * [Board Analysis](hardware-hacking/reconnaissance/opened-device/board-analysis.md)

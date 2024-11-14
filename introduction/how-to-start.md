@@ -68,7 +68,7 @@ Once you have your tools and target device, your next steps involve disassemblin
 
 I recommend reading the following pages on how to approach your first hardware hacking journey:
 
-1. [Methodology](quickstart/)
+1. [Methodology](quickstart.md)
    1. Here we describe a general methodology on how to approach hardware hacking
 2. [Reconnaissance](../network-analysis/reconnaissance.md)
    1. In this section we give an overview on what to look out for on a device

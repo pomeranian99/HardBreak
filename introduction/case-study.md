@@ -8,7 +8,7 @@ Scenario: You own a device you want to investigate and maybe modify.
 
 ## Non-invasive Testing
 
-As told in the [Methodology ](quickstart/)chapter, first you should try non-invasive methods, as opening the device is risky and can break components or the whole device. Hence, start with:
+As told in the [Methodology ](quickstart.md)chapter, first you should try non-invasive methods, as opening the device is risky and can break components or the whole device. Hence, start with:
 
 * Read the documentation:
   * Documentation of IoT devices can reveal a lot of the functionalities
