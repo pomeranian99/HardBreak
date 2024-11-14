@@ -54,10 +54,11 @@ On your PC use the following command to communicate over UART (you may have to a
 
 {% tabs %}
 {% tab title="Linux" %}
-```bash
-sudo minicom -D /dev/ttyUSB0 -b 115200
-sudo picocom -b 115200 -r -l /dev/ttyUSB0
-```
+<pre class="language-bash"><code class="lang-bash"><strong>sudo minicom -D /dev/ttyUSB0 -b 115200
+</strong>sudo picocom -b 115200 -r -l /dev/ttyUSB0
+</code></pre>
+
+Change the 115200 with the baud rate of your device (how to identify: see below)
 {% endtab %}
 
 {% tab title="Windows" %}
@@ -70,5 +71,17 @@ sudo picocom -b 115200 -r -l /dev/ttyUSB0
 5. If you see readable data: You done it correctly!
 
 <figure><img src="../../../.gitbook/assets/image (20).png" alt=""><figcaption><p>Bootlog</p></figcaption></figure>
+
+6. **If you see unreadable data then you probably have the wrong baud rate. Example**
+
+<figure><img src="../../../.gitbook/assets/image (53).png" alt=""><figcaption><p>Wrong baud rate produces unreadable data</p></figcaption></figure>
+
+### **Identifying the correct baud rate**
+
+* Quick win: Try to guess the baud rate, the most common ones are:&#x20;
+  * &#x20;9600, 38400, 19200, 57600, 115200 (which is probably the most common of all)
+* [Baudrate.py](https://github.com/sickcodes/python3-baudrate) is a script, which tests automatically for different baud rates&#x20;
+* You can also try to manually identify the correct baud rate using a [logic analyzer](../../basics/tools/hardware-tools/logic-analyzer/)&#x20;
+  * %%%TODO%%%
 
 **Congrats!** You found your first serial connection! Check out the UART chapter on how to use this to dump the firmware from the device.
