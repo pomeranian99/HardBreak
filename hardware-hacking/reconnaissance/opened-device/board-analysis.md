@@ -75,17 +75,20 @@ Todos:
 
 *   Identify what connector pins you find (if they are not labeled)
 
-    1. Put your multimeter in continuity mode (often a "sound" symbol):
+    * Put your multimeter in continuity mode (often a "sound" symbol):
 
-    <figure><img src="../../../.gitbook/assets/image (2).png" alt="" width="331"><figcaption><p>Multimeter in continuity mode</p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (76).png" alt="" width="331"><figcaption></figcaption></figure>
 
-    1. This mode will check if there is a direct link between two points on the pcb
-    2. Put one probe on the connector pad you want to test
-    3.  The other one goes on the chip (datasheet will tell you what pins are used for UART/SPI/JTAG)
+    * This mode will check if there is a direct link between two points on the pcb
+    * Put one probe on the connector pad you want to test and the other one goes on the chip (datasheet will tell you what pins are used for UART/SPI/JTAG)
 
-        <figure><img src="../../../.gitbook/assets/image (1) (1).png" alt="" width="287"><figcaption><p>How to probe</p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (1) (1).png" alt="" width="287"><figcaption><p>How to probe</p></figcaption></figure>
 
-    Try to identify all required pins for the corresponding protocol.
+    * Try to identify all required pins for the corresponding protocol.
+* If you can't use the microchips pins as reference (for example if it's a BGA chip or if there is no datasheet) you can check the voltage of the pins:
+  * High constant (around 3.3V or 5V)  indicates VCC
+  * If the voltage fluctuates this may indicate data transmission (try a [Logic Analyzer](../../basics/tools/hardware-tools/logic-analyzer/))
+  * Zero voltage indicates GND
 {% endtab %}
 
 {% tab title="External Ports" %}
