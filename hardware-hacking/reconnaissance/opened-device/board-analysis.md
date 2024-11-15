@@ -20,41 +20,6 @@ What we are looking for:
 These omponents of interest could be:
 
 {% tabs %}
-{% tab title="MCUs" %}
-* Why it’s interesting
-  * These are the "brains" of the device, containing firmware and handling communication between components. Vulnerabilities in their firmware or boot process can be exploited to bypass security measures.
-* Pentesting focus
-  * &#x20;Identify debug interfaces (e.g., JTAG, SWD), probe for firmware extraction, inspect for vulnerabilities in the bootloader or firmware updates.
-* Example
-
-<figure><img src="../../../.gitbook/assets/image (55).png" alt=""><figcaption><p>Example MCU</p></figcaption></figure>
-
-* Todos:
-  * google the chip name (here STM32H7B0) and search for the datasheet
-  * inside the datasheet look how to communicate with the chip: JTAG/UART/SPI etc.
-  * identify these pins on the PCB and check where they are going
-{% endtab %}
-
-{% tab title="Memory chips" %}
-like Flash, EEPROM, RAM
-
-* Why it’s interesting
-  * These store sensitive information such as firmware, encryption keys, and user data. Analyzing memory chips can help retrieve critical data or alter firmware.
-* Pentesting focus
-  * Direct access to these chips for firmware dumping, encryption key recovery, or manipulating stored data (e.g., via SPI or I2C interfaces).
-* Example:
-  *   They come in different sizes and chapes
-
-
-
-      <figure><img src="../../../.gitbook/assets/image (71).png" alt=""><figcaption><p>Flash chip</p></figcaption></figure>
-* Todos:
-  * google the chip name and search for the datasheet
-  * inside the datasheet look how to communicate with the chip: I2C/SPI etc.
-  * identify these pins on the PCB&#x20;
-  * check the section "Extracting Firmware using SPI"
-{% endtab %}
-
 {% tab title="Test Pins/Pads" %}
 * Why it’s interesting
   * Interfaces like UART, SPI, I2C, and JTAG allow communication between components and can offer access to debugging or internal system states.
@@ -89,6 +54,41 @@ Todos:
   * High constant (around 3.3V or 5V)  indicates VCC
   * If the voltage fluctuates this may indicate data transmission (try a [Logic Analyzer](../../basics/tools/hardware-tools/logic-analyzer/))
   * Zero voltage indicates GND
+{% endtab %}
+
+{% tab title="MCUs" %}
+* Why it’s interesting
+  * These are the "brains" of the device, containing firmware and handling communication between components. Vulnerabilities in their firmware or boot process can be exploited to bypass security measures.
+* Pentesting focus
+  * &#x20;Identify debug interfaces (e.g., JTAG, SWD), probe for firmware extraction, inspect for vulnerabilities in the bootloader or firmware updates.
+* Example
+
+<figure><img src="../../../.gitbook/assets/image (55).png" alt=""><figcaption><p>Example MCU</p></figcaption></figure>
+
+* Todos:
+  * google the chip name (here STM32H7B0) and search for the datasheet
+  * inside the datasheet look how to communicate with the chip: JTAG/UART/SPI etc.
+  * identify these pins on the PCB and check where they are going
+{% endtab %}
+
+{% tab title="Memory chips" %}
+like Flash, EEPROM, RAM
+
+* Why it’s interesting
+  * These store sensitive information such as firmware, encryption keys, and user data. Analyzing memory chips can help retrieve critical data or alter firmware.
+* Pentesting focus
+  * Direct access to these chips for firmware dumping, encryption key recovery, or manipulating stored data (e.g., via SPI or I2C interfaces).
+* Example:
+  *   They come in different sizes and chapes
+
+
+
+      <figure><img src="../../../.gitbook/assets/image (71).png" alt=""><figcaption><p>Flash chip</p></figcaption></figure>
+* Todos:
+  * google the chip name and search for the datasheet
+  * inside the datasheet look how to communicate with the chip: I2C/SPI etc.
+  * identify these pins on the PCB&#x20;
+  * check the section "Extracting Firmware using SPI"
 {% endtab %}
 
 {% tab title="External Ports" %}
