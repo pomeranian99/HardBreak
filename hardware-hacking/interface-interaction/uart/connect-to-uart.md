@@ -19,7 +19,7 @@ There are different ways to connect to identified test pads:
 {% tab title="Pins/Holes" %}
 If you are lucky, you find header pins where you can connect jumper cables to it. This is the easiest way to connect your UART-to-TTL USB adapter to an UART interface.
 
-<figure><img src="../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Header pins exposed, connect jumper cables here<br><br></p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption><p>Header pins exposed, connect jumper cables here<br><br></p></figcaption></figure>
 
 If your device has holes in the pcb for the UART connection, you can attempt to put jumper cables through it and tilt them, so they have a solid contact point:
 
@@ -39,7 +39,7 @@ Here an example when the clamps are attached:
 {% tab title="Soldering" %}
 Another option is to solder cables to the connector you found. This is especially useful if you only find flat pads to connect to.
 
-<figure><img src="../../../.gitbook/assets/image (1).png" alt="" width="246"><figcaption><p>2 cables soldered to UART</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1).png" alt="" width="246"><figcaption><p>2 cables soldered to UART</p></figcaption></figure>
 {% endtab %}
 
 {% tab title="Probes" %}

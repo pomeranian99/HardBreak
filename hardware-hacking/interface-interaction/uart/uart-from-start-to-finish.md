@@ -9,34 +9,64 @@ To interact with a UART interface, you would need:
 * jumper cables
 * and in some cases: a soldering station
 
-After opening the device follow:
+After opening the device follow the following steps to identify UART.
 
-1. **Get an overview of what is available of the PCB board**
-   1. Checkout which chips are used&#x20;
-      1. Google the datasheet of each chip you find (model should be printed on top of the chip)
-      2.  It can be useful to take a picture of the PCB and label everything you can identify
+## **Get an overview**&#x20;
 
-          <figure><img src="../../../.gitbook/assets/komplett-beschriftet (1).png" alt="" width="375"><figcaption><p>Example layout of an PCB</p></figcaption></figure>
-   2.  Check for connector or test pads
+1. Checkout which chips are used&#x20;
+   1. Google the datasheet of each chip you find (model should be printed on top of the chip)
+   2.  It can be useful to take a picture of the PCB and label everything you can identify
 
-       1. For UART we need pins: TX,RX,GND often manufacturers also put a VCC pin next to power the device. So we are looking for 4 pads or pins on the PCB board, like here:
+       <figure><img src="../../../.gitbook/assets/komplett-beschriftet (1).png" alt="" width="375"><figcaption><p>Example layout of an PCB</p></figcaption></figure>
+2.  Check for connector or test pads
 
-       <figure><img src="../../../.gitbook/assets/image.png" alt="" width="188"><figcaption><p>Potential UART pins</p></figcaption></figure>
+    1. For UART we need pins: TX,RX,GND often manufacturers also put a VCC pin next to power the device. So we are looking for 4 pads or pins on the PCB board, like here:
 
-       1. Even better if we find actual pins, where we can connect jumper cables to:
+    <figure><img src="../../../.gitbook/assets/image (1).png" alt="" width="188"><figcaption><p>Potential UART pins</p></figcaption></figure>
 
-       <figure><img src="../../../.gitbook/assets/image (31).png" alt="" width="172"><figcaption><p>Uart pins exposed</p></figcaption></figure>
-2.  **Check the pinout for the connectors:**
+    1. Even better if we find actual pins, where we can connect jumper cables to:
 
-    1.  Put your multimeter in continuity mode (often a "sound" symbol):
+    <figure><img src="../../../.gitbook/assets/image (31).png" alt="" width="172"><figcaption><p>Uart pins exposed</p></figcaption></figure>
 
-        <figure><img src="../../../.gitbook/assets/image (6).png" alt="" width="338"><figcaption><p>Multimeter in continuity mode</p></figcaption></figure>
-    2. This mode will check if there is a direct link between two points on the PCB
-    3. Put one probe on the connector pad you want to test
-    4.  The other one goes on the chip (its datasheet will tell you which pins are used for UART)
+## **Test potential UART pins**
 
-        <figure><img src="../../../.gitbook/assets/image (5).png" alt="" width="287"><figcaption><p>How to probe</p></figcaption></figure>
+To verify if the identified pins are UART, we can use a multimeter. The simplest approach is to test for continuity between the suspected pins and the known UART pins on the MCU, as indicated in its datasheet. However, if the MCU has a BGA layout with pins beneath the chip, this method won't work. In such cases, measuring the voltage of the suspected pins can help make an educated guess to identify the correct ones.
 
-    You need to find the GND (ground), TX (transmit) and RX(receive) pins to communicate with UART.
-3.  If you could identify all the needed pins, you may now [Connect to UART](connect-to-uart.md).
+{% tabs %}
+{% tab title="Continuity test" %}
+The first step is to put your multimeter in continuity mode (often a "sound" symbol). This mode will check if there is a direct link between two points on the PCB
+
+<figure><img src="../../../.gitbook/assets/image (6).png" alt="" width="338"><figcaption><p>Multimeter in continuity mode</p></figcaption></figure>
+
+Next we need identify a reference point to check against. Luckily manufacturers provide us often with datasheets of their MCUs, which include the pinout of the chip. So google your chip and find the TXD, RXD pins in the datasheet, like here:
+
+<figure><img src="../../../.gitbook/assets/image.png" alt="" width="282"><figcaption><p>Example UART pins</p></figcaption></figure>
+
+Now we can start our continuity test:
+
+* Put one probe on the connector pad you want to test
+* The other one should be on the exact pin on the chip (RX or TX).
+* It should look like this:
+
+<figure><img src="../../../.gitbook/assets/image (5).png" alt="" width="287"><figcaption><p>How to probe</p></figcaption></figure>
+
+If you hear a BEEP, then there is a direct link between the pin and the pad you checked. You need to find the GND (ground), TX (transmit) and RX(receive) pins to communicate with UART.
+{% endtab %}
+
+{% tab title="Voltage test" %}
+Do this when booting up the device, as the device will print out a lot of stuff over UART and we can therefore identify RX and TX better.&#x20;
+
+\
+If you can't use the microchips pins as reference (for example if it's a BGA chip or if there is no datasheet) you can check the voltage of the pins:
+
+* High constant (around 3.3V or 5V) indicates VCC
+* If the voltage fluctuates this may indicate data transmission and therefore the TX pin of the chip (reminder: has to be connected to RX on your UART adapter NOT TX)
+* Zero voltage indicates GND
+* Depending on the UART configuration the RX pin is either idle high or idle low, so it is not so easy to differentiale it from GND or VCC
+{% endtab %}
+{% endtabs %}
+
+## Next Step
+
+If you could identify all the needed pins, you may now [Connect to UART](connect-to-uart.md).
 
