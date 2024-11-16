@@ -1,65 +1,12 @@
 # Extract Firmware using UART
 
-After connecting to a UART connector on a PCB we can try to extract firmware over it.
+#### At this point you should have:
 
-### Steps to Extract Firmware Over UART
+* Understand what UART does (if not check: [UART](./))
+* Identified UART pins (if not check:[ Identify UART](uart-from-start-to-finish.md))
+* Got a working connection to UART (if not check: [Connect to UART](connect-to-uart.md))
 
-#### 1. **Identify UART Pins**
-
-* Locate the UART pins (TX, RX, GND, and possibly VCC) on the target device. The device’s documentation or datasheet may provide this information.
-* Typically, the pins are labeled as follows:
-  * **TX** (Transmit) \[fluctuate Voltage, when data is transmitted]
-  * **RX** (Receive) \[may look like VCC pin, when not connected: 3.3V]
-  * **GND** (Ground) \[0V]
-  * **VCC** (Power, optional) \[common to have: 3.3V or 5V]
-
-#### 2. **Connect the UART Adapter**
-
-* You need an **USB-to-UART Adapter**: FTDI FT232, CP2102, CH340, etc.
-* Use jumper wires to connect the UART adapter to the target device as follows:
-  * **TX (Adapter) → RX (Device)**
-  * **RX (Adapter) → TX (Device)**
-  * **GND (Adapter) → GND (Device)**
-  * **VCC (Optional, Adapter) → VCC (Device)** (if powering the device through the adapter)
-
-#### 3. **Configure Serial Terminal**
-
-* Open your serial terminal software and configure the following settings:
-  * **Baud Rate**: Common values are 9600, 115200, or as specified in the device’s documentation (picocom also has a feature to adjust the baud rate on the fly (check docs)).
-  * **Data Bits**: 8
-  * **Parity**: None
-  * **Stop Bits**: 1
-  * **Flow Control**: None
-
-{% tabs %}
-{% tab title="Linux" %}
-```bash
-sudo minicom -D /dev/ttyUSB0 -b 115200
-sudo picocom -b 115200 -r -l /dev/ttyUSB0
-```
-{% endtab %}
-
-{% tab title="Windows" %}
-**Using PuTTY (Windows)**:
-
-* Select “Serial” and enter the COM port (e.g., COM3) and baud rate (115200).
-{% endtab %}
-{% endtabs %}
-
-#### 4. **Establish Connection**
-
-* Open the connection in the serial terminal software. Depending on the device and its bootloader, there are many different options how the UART is implemented. It is a good sign if you see a terminal interface that may display boot messages or a command prompt from the target device.
-*   If you see something like this: you may adjust the baud rate as it is probably wrong
-
-    <figure><img src="../../../.gitbook/assets/image (54).png" alt=""><figcaption><p>False baud rate</p></figcaption></figure>
-*   If you see a boot log:
-
-    * Restart the device again and capture the full bootlog, as it can contain important information
-    * The MTD partition for example can tell us where the root filesystem is stored
-
-    <figure><img src="../../../.gitbook/assets/image (70).png" alt="" width="341"><figcaption><p>MTD partitions created</p></figcaption></figure>
-
-#### Not all UART interfaces are the same. Infect manufacturers could output actually anything over it. But there are common methods, which we want to discuss further:
+#### Not all UART interfaces are the same. Infact manufacturers could output actually anything over it. So there is no guarante you can abuse UART to dump firmware or get a shell on the device. But there are common methods, which we want to discuss further:
 
 {% tabs %}
 {% tab title="Failsafe mode" %}

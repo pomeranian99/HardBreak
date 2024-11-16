@@ -1,8 +1,9 @@
 # Connect to UART
 
-S**cenario:**&#x20;
+#### At this point you should have:
 
-You followed "[Board Analysis](../../reconnaissance/opened-device/board-analysis.md)" or "[Identify UART](uart-from-start-to-finish.md)" and could identify an active UART interface
+* Understand what UART does (if not check: [UART](./))
+* Identified UART pins (if not check:[ Identify UART](uart-from-start-to-finish.md))
 
 ## Connect to UART
 

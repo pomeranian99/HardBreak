@@ -10,7 +10,7 @@ Pentesters may encounter UART interfaces during hardware security assessments an
 
 ```bash
 #Usage
-UART is a async protocol, which is often used as a bootlog output or a console
+UART is an async protocol, which is often used as a bootlog output or a console
 #pins
 to connect to uart you need 3 pins: TX,RX and GND
 #Tools needed
