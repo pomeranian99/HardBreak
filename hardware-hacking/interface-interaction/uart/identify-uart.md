@@ -1,6 +1,6 @@
-# UART- From start to finish
+# Identify UART
 
-This page should is a complete run from identifying a UART interface and using it extract firmware from a target device.
+This page should will teach you how to identify a UART interface. If you already confirmed the found debug connector is using UART you may continue with[ Connect to UART](connect-to-uart.md).
 
 To interact with a UART interface, you would need:
 
@@ -38,28 +38,5 @@ After opening the device follow:
         <figure><img src="../../../.gitbook/assets/image (5).png" alt="" width="287"><figcaption><p>How to probe</p></figcaption></figure>
 
     You need to find the GND (ground), TX (transmit) and RX(receive) pins to communicate with UART.
-3.  Now you need to connect the pins using jumper cables to the UART-USB-TTL adapter (make sure RX -> TX and TX->RX, as they have to be reversed). This can be done by soldering the cables onto the connector pins, plug them in or use clamps.
+3.  If you could identify all the needed pins, you may now [Connect to UART](connect-to-uart.md).
 
-    <figure><img src="../../../.gitbook/assets/image (68).png" alt="" width="259"><figcaption><p>UART connection</p></figcaption></figure>
-4. On your PC use the following command to communicate over UART (you may have to adjust the baud rate)
-
-{% tabs %}
-{% tab title="Linux" %}
-```bash
-sudo minicom -D /dev/ttyUSB0 -b 115200
-sudo picocom -b 115200 -r -l /dev/ttyUSB0
-```
-{% endtab %}
-
-{% tab title="Windows" %}
-**Using PuTTY (Windows)**:
-
-* Select “Serial” and enter the COM port (e.g., COM3) and baud rate (115200).
-{% endtab %}
-{% endtabs %}
-
-5. If you see readable data: You done it correctly!
-
-<figure><img src="../../../.gitbook/assets/image (20).png" alt=""><figcaption><p>example bootlog </p></figcaption></figure>
-
-**Congrats!** You found your first serial connection! Check out the UART chapter on how to use this to dump the firmware from the device.
