@@ -14,6 +14,7 @@
 * [Basics](hardware-hacking/basics/README.md)
   * [Tools](hardware-hacking/basics/tools/README.md)
     * [Hardware Tools](hardware-hacking/basics/tools/hardware-tools/README.md)
+      * [Essential Tools](hardware-hacking/basics/tools/hardware-tools/essential-tools.md)
       * [Soldering Tools](hardware-hacking/basics/tools/hardware-tools/soldering-tools.md)
       * [Logic Analyzer](hardware-hacking/basics/tools/hardware-tools/logic-analyzer/README.md)
         * [Saleae Logic Analyzer](hardware-hacking/basics/tools/hardware-tools/logic-analyzer/saleae-logic-analyzer.md)
