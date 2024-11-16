@@ -4,7 +4,7 @@ icon: magnifying-glass
 
 # Board Analysis
 
-As any other pentest, it's important to take your time to enumerate the PCB you want to test. Overlooking components or interfaces can waste a lot of time.
+It's important to take your time to enumerate the PCB you want to test. Overlooking components or interfaces can waste a lot of time.
 
 To analyze a PCB board, you need:
 

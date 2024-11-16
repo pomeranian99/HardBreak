@@ -6,6 +6,24 @@ UART is a hardware communication protocol that facilitates serial communication 
 
 Pentesters may encounter UART interfaces during hardware security assessments and can use this interface to extract firmware, debug, or interact with the device at a low level.
 
+### Cheat Sheet
+
+```bash
+#Usage
+UART is a async protocol, which is often used as a bootlog output or a console
+#pins
+to connect to uart you need 3 pins: TX,RX and GND
+#Tools needed
+check UART-to-TTL adapter (connect TX=>RX, RX=>TX, GND=>GND)
+#baud rates
+most common  9600, 38400, 19200, 57600, 115200 else try: Baudrate.py on Github
+#connect to UART
+minicom -b 115200 -o -D /dev/ttyUSB0
+#extract firmware
+try to interrupt the bootloader to jump into a bootloder shell like U-BOOT
+search for credentials of your device to login
+```
+
 ### Configuration
 
 UART can be configured in many different ways. Next, we want to introduce some key settings.

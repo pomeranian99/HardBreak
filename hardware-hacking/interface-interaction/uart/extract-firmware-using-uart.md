@@ -1,6 +1,6 @@
 # Extract Firmware using UART
 
-After finding a UART connector on a PCB we can try to extract firmware over it.
+After connecting to a UART connector on a PCB we can try to extract firmware over it.
 
 ### Steps to Extract Firmware Over UART
 
