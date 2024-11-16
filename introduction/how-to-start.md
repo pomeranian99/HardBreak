@@ -8,9 +8,7 @@ In this chapter we want to describe on how to get started with hardware hacking 
 
 ## Choosing Your First Target Device
 
-To start your journey in hardware hacking, it's best to choose an old, expendable device as your first target. You should not start trying to jailbreak your brothers new PS5 console, as this thing is probably well secured and will result in a lot of tears from your brother, if something goes wrong. Hardware hacking can cause your device to break if you're not careful. That's why it's best to go to the basement and look for devices that are lying around anyway, and it won't hurt if they break.&#x20;
-
-One of the best options for beginners is a used or outdated router. Routers are rich in components to analyze and often run on operating systems (most likely Linux) that hackers can investigate. Additionally, they usually contain ports that can help you learn data communication methods. Other options may be network switches, IP cameras. Actually anything that have some kind of logic inside and can connect to the internet may be good target devices.
+To start hardware hacking, choose an old, expendable device as your first target. Avoid experimenting on valuable devices like your brother's PS5, as they are likely well-secured and could lead to frustration if something goes wrong. Hardware hacking can damage your device, so it's best to use something you don't mind breaking. A used or outdated router is an excellent option for beginners, as it offers components to analyze and often runs a Linux-based OS. Other potential targets include network switches, IP cameras, or any device with logic and internet connectivity.
 
 #### Why Start with Old Devices?
 
@@ -25,15 +23,11 @@ One of the best options for beginners is a used or outdated router. Routers are 
 
 Once you have your target device, you’ll need a few basic tools to get started. Hardware hacking often involves opening up devices, probing circuits, and sometimes connecting to hidden communication interfaces. Here’s a starter list:
 
-#### 1. Target Device
-
-Any old electronic device can be a potential hacking target, but for beginners, routers, IP cameras, and smart home devices are ideal. These devices are accessible, relatively simple to work with, and often have online resources available to help you understand their common components.
-
-#### 2. Screwdriver Set
+#### 1. Screwdriver Set
 
 Most devices are assembled with screws, so a set of small precision screwdrivers is essential. Look for a set that includes a variety of sizes and types, like Phillips and flathead, as you'll encounter different types of screws across devices.
 
-#### 3. [Soldering Iron and Equipment](../hardware-hacking/basics/tools/hardware-tools/soldering-tools.md)
+#### 2. [Soldering Iron and Equipment](../hardware-hacking/basics/tools/hardware-tools/soldering-tools.md)
 
 A soldering iron is crucial for attaching wires or replacing components. In hardware hacking, you'll often use it to attach wires to test points or UART (Universal Asynchronous Receiver-Transmitter) pins. Choose a soldering iron with adjustable temperature control, and get some basic soldering accessories like:
 
@@ -46,19 +40,19 @@ A soldering iron is crucial for attaching wires or replacing components. In hard
 * Soldering mat
   * to protect your table, in case solder drops down
 
-#### 4. [Multimeter](../hardware-hacking/basics/tools/hardware-tools/multimeters-and-oscilloscopes.md)
+#### 3. [Multimeter](../hardware-hacking/basics/tools/hardware-tools/multimeters-and-oscilloscopes.md)
 
 A multimeter helps you measure voltage, resistance, and continuity, which is essential for checking connections and understanding the electrical characteristics of your target device. A good multimeter can prevent accidental shorts by helping you identify where power runs through the device.
 
-#### 5. Jumper Cables
+#### 4. Jumper Cables
 
 Jumper cables are useful for connecting different points on a circuit board without needing to solder, which is especially handy for quick testing. They're essential for connecting components like a UART adapter or power source temporarily.
 
-#### 6. [UART Adapter](../hardware-hacking/basics/tools/hardware-tools/uart-to-ttl-adapter.md)
+#### 5. [UART Adapter](../hardware-hacking/basics/tools/hardware-tools/uart-to-ttl-adapter.md)
 
 A UART (Universal Asynchronous Receiver-Transmitter) adapter allows you to communicate with the device’s serial interface. Many embedded systems, including routers, expose UART pins, which can provide a low-level console output. Through this connection, you may be able to access the device’s debug information or even drop into a root shell if it’s unsecured. A basic USB-to-UART adapter will allow you to connect the target device to your computer and start investigating.
 
-#### 7. (Optional) [Bus Pirate](../hardware-hacking/basics/tools/hardware-tools/open-source-tools/bus-pirate.md)
+#### 6. (Optional) [Bus Pirate](../hardware-hacking/basics/tools/hardware-tools/open-source-tools/bus-pirate.md)
 
 The Bus Pirate is a versatile, open-source tool that can communicate with a wide range of protocols beyond UART. It’s especially useful for hardware hackers working with devices that use protocols like SPI (Serial Peripheral Interface), I²C (Inter-Integrated Circuit), and JTAG. Your chosen target device may not have an UART port, so you might have to look into alternative ways on how to dump its firmware. Although it’s optional, the Bus Pirate is a valuable addition to a hardware hacking toolkit if you plan to explore multiple protocols.
 

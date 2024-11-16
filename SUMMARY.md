@@ -4,7 +4,6 @@
 
 ## Introduction
 
-* [What is Hardware Hacking?](introduction/what-is-hardware-hacking.md)
 * [How to start](introduction/how-to-start.md)
 * [Methodology](introduction/quickstart.md)
 * [Case Study](introduction/case-study.md)
