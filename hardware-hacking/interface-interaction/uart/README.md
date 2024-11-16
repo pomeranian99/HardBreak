@@ -1,3 +1,9 @@
+---
+description: >-
+  This page gives a general overview about UART. Checkout the subpages on how to
+  identify UART, how to connect and extract firmware from it.
+---
+
 # UART
 
 ## **Theory**
@@ -81,7 +87,7 @@ UART can be configured in many different ways. Next, we want to introduce some k
    * Baud rate detection tools:
      * `baudrate.py` script or any other baud rate analyzer.
 
-## **Usage:**
+## **Usage**
 
 1.  UART Discovery
 
@@ -114,7 +120,7 @@ UART can be configured in many different ways. Next, we want to introduce some k
 5. Bricking/Unbricking a Device:
    * UART access may allow you to recover a bricked device by flashing new firmware or interacting with the bootloader.
 
-## Resources:
+## Resources
 
 [https://wiki.emacinc.com/wiki/Getting\_Started\_With\_Minicom](https://wiki.emacinc.com/wiki/Getting\_Started\_With\_Minicom)\
 [https://www.cyberark.com/resources/threat-research-blog/accessing-and-dumping-firmware-through-uart](https://www.cyberark.com/resources/threat-research-blog/accessing-and-dumping-firmware-through-uart)
