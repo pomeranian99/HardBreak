@@ -14,7 +14,7 @@ Pentesters may encounter UART interfaces during hardware security assessments an
 
 ### Cheat Sheet
 
-```bash
+```python
 #Usage
 UART is an async protocol, which is often used as a bootlog output or a console
 #pins
