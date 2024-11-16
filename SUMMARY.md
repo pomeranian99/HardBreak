@@ -44,7 +44,7 @@
 * [Interface Interaction](hardware-hacking/interface-interaction/README.md)
   * [UART](hardware-hacking/interface-interaction/uart/README.md)
     * [Connect to UART](hardware-hacking/interface-interaction/uart/connect-to-uart.md)
-    * [Connect to UART- From start to finish](hardware-hacking/interface-interaction/uart/connect-to-uart-from-start-to-finish.md)
+    * [UART- From start to finish](hardware-hacking/interface-interaction/uart/uart-from-start-to-finish.md)
     * [Extract Firmware using UART](hardware-hacking/interface-interaction/uart/extract-firmware-using-uart.md)
   * [I2C](hardware-hacking/interface-interaction/i2c.md)
   * [SPI](hardware-hacking/interface-interaction/spi/README.md)

@@ -47,7 +47,7 @@ Todos:
     * This mode will check if there is a direct link between two points on the pcb
     * Put one probe on the connector pad you want to test and the other one goes on the chip (datasheet will tell you what pins are used for UART/SPI/JTAG)
 
-    <figure><img src="../../../.gitbook/assets/image (1) (1).png" alt="" width="287"><figcaption><p>How to probe</p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (1) (1) (1).png" alt="" width="287"><figcaption><p>How to probe</p></figcaption></figure>
 
     * Try to identify all required pins for the corresponding protocol.
 * If you can't use the microchips pins as reference (for example if it's a BGA chip or if there is no datasheet) you can check the voltage of the pins:
