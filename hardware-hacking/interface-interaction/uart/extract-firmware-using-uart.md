@@ -21,6 +21,14 @@ Pressing `F`  will give us a root shell:
 
 <figure><img src="../../../.gitbook/assets/image (32).png" alt=""><figcaption><p>OpenWrt command command shell</p></figcaption></figure>
 
+Depending on your device you may have to mount the correct filesystem first:
+
+* Run `ls /dev` or `blkid` to locate storage devices and partitions (e.g., `/dev/sda1`, `/dev/mmcblk0p2`).
+* Use these commands to first create a mount point and then mound the filesystem:
+  * &#x20;`mkdir /mnt/filesystem`
+  * `mount /dev/<root_partition> /mnt/filesystem`
+* Now you may access the filesystem under `/mnt/filesystem`
+
 From here we can check if the root-filesystem is already been mounted and we can look for:
 
 * /etc/shadow hashes
@@ -86,7 +94,7 @@ To dump the firmware, we can then use one of these options:
        md.b 0xC6200000 0x43C
        ```
 
-       Tool that does these steps automatically: https://github.com/nmatt0/firmwaretools
+       Tool that does these steps automatically:[ https://github.com/nmatt0/firmwaretools](https://github.com/nmatt0/firmwaretools)
 {% endtab %}
 
 {% tab title="Root-shell" %}
@@ -110,7 +118,7 @@ Ensure you verify the correct device paths to avoid overwriting important data. 
 ## Analyze firmware
 
 * Using `binwalk firmware.bin` we can try to analyze the firmware and extract sensitive information
-* check the "Analyze Firmware" chapter
+* check the "[Analyze Firmware](extract-firmware-using-uart.md#analyze-firmware)" chapter
 
 ## Resources
 
