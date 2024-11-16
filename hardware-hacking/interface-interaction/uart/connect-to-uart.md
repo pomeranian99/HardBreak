@@ -2,7 +2,7 @@
 
 S**cenario:**&#x20;
 
-You followed "[Board Analysis](../../reconnaissance/opened-device/board-analysis.md)" and could identify an active UART interface
+You followed "[Board Analysis](../../reconnaissance/opened-device/board-analysis.md)" or "[Identify UART](uart-from-start-to-finish.md)" and could identify an active UART interface
 
 ## Connect to UART
 
