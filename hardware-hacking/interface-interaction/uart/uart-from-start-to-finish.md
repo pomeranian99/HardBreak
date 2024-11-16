@@ -1,6 +1,6 @@
 # Identify UART
 
-This page should will teach you how to identify a UART interface. If you already confirmed the found debug connector is using UART you may continue with[ Connect to UART](connect-to-uart.md).
+This page should will teach you how to identify an [UART](./) interface. If you already confirmed the found debug connector is using UART you may continue with[ Connect to UART](connect-to-uart.md).
 
 To interact with a UART interface, you would need:
 
