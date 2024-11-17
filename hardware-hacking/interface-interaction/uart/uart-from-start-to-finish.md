@@ -63,6 +63,28 @@ If you can't use the microchips pins as reference (for example if it's a BGA chi
 * If the voltage fluctuates this may indicate data transmission and therefore the TX pin of the chip (reminder: has to be connected to RX on your UART adapter NOT TX)
 * Zero voltage indicates GND
 * Depending on the UART configuration the RX pin is either idle high or idle low, so it is not so easy to differentiale it from GND or VCC
+
+Here a summary:
+
+| Voltage Range         | Signal |
+| --------------------- | ------ |
+| 3.3V-5V Vcc           | Vcc    |
+| 1.7-2.5V (fluctuates) | Tx     |
+| 0-0.004V OR 3.3-5V    | Rx     |
+| 0V                    | GND    |
+{% endtab %}
+
+{% tab title="Restance check" %}
+Another method is to check the resistance of each test pad against GND.&#x20;
+
+Here would be the expected values, but it also is depending on the configuration:
+
+| Resistance                          | Signal |
+| ----------------------------------- | ------ |
+| ∞                                   | Vcc    |
+| \~80kΩ                              | Tx     |
+| \~12kΩ                              | Rx     |
+| 0Ω (should beep in continuity mode) | GND    |
 {% endtab %}
 {% endtabs %}
 
