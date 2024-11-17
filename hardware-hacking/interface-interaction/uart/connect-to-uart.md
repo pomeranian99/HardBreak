@@ -19,7 +19,7 @@ There are different ways to connect to identified test pads:
 {% tab title="Pins/Holes" %}
 If you are lucky, you find header pins where you can connect jumper cables to it. This is the easiest way to connect your UART-to-TTL USB adapter to an UART interface.
 
-<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption><p>Header pins exposed, connect jumper cables here<br><br></p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Header pins exposed, connect jumper cables here<br><br></p></figcaption></figure>
 
 If your device has holes in the pcb for the UART connection, you can attempt to put jumper cables through it and tilt them, so they have a solid contact point:
 
@@ -39,7 +39,7 @@ Here an example when the clamps are attached:
 {% tab title="Soldering" %}
 Another option is to solder cables to the connector you found. This is especially useful if you only find flat pads to connect to.
 
-<figure><img src="../../../.gitbook/assets/image (1) (1) (1).png" alt="" width="246"><figcaption><p>2 cables soldered to UART</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1).png" alt="" width="246"><figcaption><p>2 cables soldered to UART</p></figcaption></figure>
 {% endtab %}
 
 {% tab title="Probes" %}
@@ -86,6 +86,6 @@ Change the 115200 with the baud rate of your device (how to identify: see below)
 
     * When hovering your capture with the mouse in the Saleae Logic Software you can see the the width is equal to 111.111kHZ which is very close to 115200, so we should choose this baud rate
 
-    <figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption><p>Use logic analyzer to get correct baud rate</p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption><p>Use logic analyzer to get correct baud rate</p></figcaption></figure>
 
 **Congrats!** You found your first serial connection! Check out the UART chapter on how to use this to dump the firmware from the device.
