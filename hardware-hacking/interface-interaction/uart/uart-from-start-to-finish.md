@@ -22,7 +22,7 @@ After opening the device follow the following steps to identify UART.
 
     1. For UART we need pins: TX,RX,GND often manufacturers also put a VCC pin next to power the device. So we are looking for 4 pads or pins on the PCB board, like here:
 
-    <figure><img src="../../../.gitbook/assets/image (1) (1) (1).png" alt="" width="188"><figcaption><p>Potential UART pins</p></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1).png" alt="" width="188"><figcaption><p>Potential UART pins</p></figcaption></figure>
 
     1. Even better if we find actual pins, where we can connect jumper cables to:
 
@@ -40,7 +40,7 @@ The first step is to put your multimeter in continuity mode (often a "sound" sym
 
 Next we need identify a reference point to check against. Luckily manufacturers provide us often with datasheets of their MCUs, which include the pinout of the chip. So google your chip and find the TXD, RXD pins in the datasheet, like here:
 
-<figure><img src="../../../.gitbook/assets/image (1) (1).png" alt="" width="282"><figcaption><p>Example UART pins</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1) (1).png" alt="" width="282"><figcaption><p>Example UART pins</p></figcaption></figure>
 
 Now we can start our continuity test:
 

@@ -10,7 +10,8 @@ After you successfully obtained a firmware dump, it's time to analyze its conten
 
 binwalk is the goto option for quickly analyzing your firmware
 
-* `binwalk firmware.bin` : will give you an overview which contents are found in the dump
+* Identify data
+  * `binwalk firmware.bin` : will give you an overview which contents are found in the dump
   *   **Example Output:**
 
       ```bash
@@ -21,13 +22,21 @@ binwalk is the goto option for quickly analyzing your firmware
       1024          0x400           Linux kernel ARM boot executable zImage (little-endian)
       1048576       0x100000        Squashfs filesystem, little endian, version 4.0, compression: lzma, size: 262144 bytes, 1198 inodes, blocksize: 131072 bytes, created: Mon Jan  1 00:00:00 2024
       ```
-*   `binwalk -e firmware.bin` : will try to automatically extract all content => will often give us full root-filesystem. Note: parts of very high entropy can be sign for compression or encryption being used.
+*   Extract Firmware
 
-    * `binwalk -E firmware.bin`This will give us the entropy of the firmware Example Output:
+    * `binwalk -e firmware.bin` : will try to automatically extract all content => will often give us full root-filesystem.&#x20;
+    * Example:
+
+    <figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption><p>Example extraction of a firmware</p></figcaption></figure>
+*   Entropy Analyiss
+
+    * `binwalk -E firmware.bin`This will give us the entropy of the firmware
+      * Note: parts of very high entropy can be sign for compression or encryption being used.
+      * &#x20;Example Output:
 
     <figure><img src="../.gitbook/assets/image (47).png" alt="" width="375"><figcaption><p>Here we see a blob which might be encrypted or compressed<br><br><br></p></figcaption></figure>
 
-the `strings` command can be helpful to quickly find sensitive data like passwords or password hashes:
+The `strings` command can be helpful to quickly find sensitive data like passwords or password hashes:
 
 *   **Password Hashes:**
 

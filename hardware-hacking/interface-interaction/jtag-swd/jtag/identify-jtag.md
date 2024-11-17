@@ -24,13 +24,13 @@ JTAG is typically implemented using the following standard signals, which we nee
   * Use magnification to inspect nearby traces. JTAG pins often connect directly to the processor or debug interfaces.
   * Check for standardized pinouts like ARM’s 20-pin or 10-pin connectors.
 
-<figure><img src="../../../../.gitbook/assets/image (1).png" alt="" width="375"><figcaption><p>Potential JTAG interface</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (1) (1).png" alt="" width="375"><figcaption><p>Potential JTAG interface</p></figcaption></figure>
 
 ### 3. **Test for Common JTAG Pinouts**
 
 Here are a few common JTAG pinouts to reference:
 
-<figure><img src="../../../../.gitbook/assets/image.png" alt="" width="375"><figcaption><p>Common JTAG pinouts</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (2).png" alt="" width="375"><figcaption><p>Common JTAG pinouts</p></figcaption></figure>
 
 ### 4. **Electrical Verification**
 
