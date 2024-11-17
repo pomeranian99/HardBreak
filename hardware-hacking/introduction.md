@@ -57,5 +57,3 @@ The content of this wiki has a top to button approach, so you can just follow th
 * [_**Analyze Firmware**_](analyze-firmware.md)\
   Once you’ve extracted firmware, this chapter guides you through analyzing it using tools like **binwalk** to uncover vulnerabilities, hardcoded secrets, and sensitive information.
 
-.
-
