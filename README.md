@@ -27,6 +27,31 @@ _**This page is a free and open-source wiki about hardware hacking!**_
 
 The goal of HardBreak ([https://www.hardbreak.wiki/](https://www.hardbreak.wiki/)) is to collect knowledge about Hardware Hacking / IoT hacking in one place. There are many great blogs about Hardware Hacking, but it is a rather unpleasant experience to search through multiple blogs in different formats to find the information you need. HardBreak aims to organize all information in one accessible and easy-to-use platform.
 
+## Overview
+
+* [Introduction](broken-reference)
+  * In this chapter we give you guidance on [how to start](introduction/how-to-start.md) hardware hacking:
+    * What first target device to choose
+    * Essential tools to start with
+    * [Methodology](introduction/quickstart.md)
+    * A hands on [Case Study](introduction/case-study.md)
+* [Hardware Hacking](broken-reference)
+  * Top down approach to follow and investigate your device
+    * [Basics](hardware-hacking/basics/) ([Hardware Tools](hardware-hacking/basics/tools/hardware-tools/), [Software](hardware-hacking/basics/tools/software-tools/) and [Common Hardware Components](hardware-hacking/basics/common-hardware-components.md))
+  * [Reconnaissance](hardware-hacking/reconnaissance/) ([OSINT](hardware-hacking/reconnaissance/closed-device/osint-search-the-web.md), [Board Analysis](hardware-hacking/reconnaissance/opened-device/board-analysis.md))
+  * [Interface Interaction](hardware-hacking/interface-interaction/):
+    * Introduction to different protocols: e.g.,[UART](hardware-hacking/interface-interaction/uart/), [JTAG](hardware-hacking/interface-interaction/jtag-swd/jtag/), [SWD](hardware-hacking/interface-interaction/jtag-swd/swd.md), [SPI](hardware-hacking/interface-interaction/spi/), [I2C](hardware-hacking/interface-interaction/i2c.md)..
+      * How to [Identify](hardware-hacking/interface-interaction/uart/uart-from-start-to-finish.md) and use those protocols
+      * [extract firmware](hardware-hacking/interface-interaction/uart/extract-firmware-using-uart.md) using debug protocols
+  * [Bypass Security Mechanisms](hardware-hacking/bypassing-security/)
+    * Introduction to [Voltage Glichting](hardware-hacking/bypassing-security/voltage-glitiching/)
+  * How to [analyze Firmware](hardware-hacking/analyze-firmware.md)
+* [Network Analysis](broken-reference)
+  * How to analyze protocols: [Reverse Engineering ](network-analysis/protocols/application-layer/proprietary-protocols/parrot-anafi-drone-reverse-engineering.md)a drone
+* [Radio Hacking](broken-reference)
+  * Tools ([RTL-SDR](radio-hacking/tools/rf-signal-analyzers/rtl-sdr.md),[ Flipper Zero](radio-hacking/tools/flipper-zero/))
+  * Protocols ([RFID](radio-hacking/protocols/rfid.md), [NFC](radio-hacking/tools/flipper-zero/nfc.md)) and how to hack them
+
 ## How You Can Contribute
 
 We strongly encourage anyone interested to contribute their knowledge and insights. By sharing your discoveries or improving existing content, you help build a valuable resource for everyone.
