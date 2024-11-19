@@ -8,9 +8,9 @@ description: >-
 
 ## **Theory**
 
-UART is a hardware communication protocol that facilitates serial communication between devices. It is commonly used in embedded systems for communication between a microcontroller and peripherals like sensors, GPS modules, or Wi-Fi modules. UART operates on two main lines: Transmit (TX) and Receive (RX), often accompanied by Ground (GND).
+UART is a hardware communication protocol that facilitates serial communication between devices. It is commonly used in IoT /embedded systems for communication between a microcontroller and peripherals like sensors, GPS modules, or Wi-Fi modules. It is also used for debugging porpuses like printing out the bootlog or even give direct shell access to the device. UART operates on two main lines: Transmit (TX) and Receive (RX), often accompanied by Ground (GND).
 
-Pentesters may encounter UART interfaces during hardware security assessments and can use this interface to extract firmware, debug, or interact with the device at a low level.
+Pentesters may encounter UART interfaces during hardware hacking and can use this interface to extract firmware, debug, or interact with the device at a low level.
 
 ### Cheat Sheet
 
