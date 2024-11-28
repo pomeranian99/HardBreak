@@ -38,15 +38,15 @@ Here are some key features and thought to keep in mind
 * Glitch Parameter Configuration:
   * Use a Python script which will brute force the glitch parameters (offset, voltage level and width of glitch)
 * Step-by-step:
-  1. Target chip starts
+  1. target chip starts
   2. we will perform a glitch (varying offset, width and voltage of glitch)
   3. perform UART check if we can read data  “R 0 4 \r \n”
   4. if error code "19" is read, start with new parameters
   5. run until we can read data => then we have a successful glitch
 
-According to Andrea Baccega if the Brown-Detection (which resets the chip, if the voltage is too low) is enabled, you can disable it [by connecting P2\[13\] of LPC1768 to GND upon boot.](https://github.com/vekexasia/lpc\_voltage\_glitch\_test)
+According to Andrea Baccega if the Brown-Detection (which resets the chip, if the voltage is too low) is enabled, you can disable it [by connecting P2\[13\] of LPC1768 to GND upon boot.](https://github.com/vekexasia/lpc_voltage_glitch_test)
 
 ## Resources
 
-[https://github.com/vekexasia/lpc\_voltage\_glitch\_test](https://github.com/vekexasia/lpc\_voltage\_glitch\_test)
+[https://github.com/vekexasia/lpc\_voltage\_glitch\_test](https://github.com/vekexasia/lpc_voltage_glitch_test)
 
