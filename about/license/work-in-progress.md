@@ -22,7 +22,7 @@ As you can see there are 4 connector pads on the top right of the PCB. This layo
 
 Enough research! Let's take a look for ourselves and open the device.  Our goal is to identify components of interest, which might be storing chips like RAM or flash chips, debug ports and interfaces. It's always a good idea to take a  of your device and label component, which you could identify.
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt="" width="375"><figcaption><p>Identified components</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt="" width="375"><figcaption><p>Identified components</p></figcaption></figure>
 
 &#x20;As we can see next to the flash chip there are 4 connector pins. Using a multimeter, we can try to identify each of the pins performing a continuity test. For that we need test points for ground and power. We can use the GND and VCC pins of the flash chip as a reference, since we can look them up on the datasheet of the flash chip.
 
@@ -232,5 +232,10 @@ wanduck: delay 5 seconds before the first detect...
 
 Moreover after the router bootprocess is finished, the UART interface gives us a unauthenticated root shell!
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
+## Post Exploitation
+
+We can now analyze the router from the inside and check out running processes, installed programs etc. In case you forgot your router password, you can simply read it out in plaintext:
+
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Example password read out</p></figcaption></figure>

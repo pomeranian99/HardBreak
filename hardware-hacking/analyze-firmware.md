@@ -27,7 +27,7 @@ binwalk is the goto option for quickly analyzing your firmware
     * `binwalk -e firmware.bin` : will try to automatically extract all content => will often give us full root-filesystem.&#x20;
     * Example:
 
-    <figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption><p>Example extraction of a firmware</p></figcaption></figure>
+    <figure><img src="../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption><p>Example extraction of a firmware</p></figcaption></figure>
 *   Entropy Analyiss
 
     * `binwalk -E firmware.bin`This will give us the entropy of the firmware
