@@ -103,4 +103,5 @@
 * [Impressum – Legal Notice](about/impressum-legal-notice.md)
 * [Privacy Policy](about/privacy-policy.md)
 * [Datenschutzerklärung](about/datenschutzerklarung.md)
-* [License](about/license.md)
+* [License](about/license/README.md)
+  * [Work in Progress](about/license/work-in-progress.md)

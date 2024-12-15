@@ -60,7 +60,7 @@ After opening the device follow:
        Note: Not all PCBs have these connectors or the interfaces may be disabled.
 2.  Check the pinout for the connectors:
 
-    1. Put the multimeter in continuity mode (often a "diode" / "soundwave line**"** symbol) here on top:
+    1. Put the multimeter in continuity mode (often a "diode" / "soundwave lin&#x65;**"** symbol) here on top:
 
     <figure><img src="../.gitbook/assets/image (74).png" alt="" width="507"><figcaption><p>multimeter</p></figcaption></figure>
 
