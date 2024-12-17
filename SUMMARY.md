@@ -6,7 +6,8 @@
 
 * [How to start](introduction/how-to-start.md)
 * [Methodology](introduction/quickstart.md)
-* [Case Study](introduction/case-study.md)
+* [Case Study (Led to a CVE Update)](introduction/case-study-led-to-a-cve-update/README.md)
+  * [General Case Study](introduction/case-study-led-to-a-cve-update/general-case-study.md)
 
 ## Hardware Hacking
 
@@ -103,5 +104,4 @@
 * [Impressum – Legal Notice](about/impressum-legal-notice.md)
 * [Privacy Policy](about/privacy-policy.md)
 * [Datenschutzerklärung](about/datenschutzerklarung.md)
-* [License](about/license/README.md)
-  * [Case Study (Led to a CVE Update)](about/license/case-study-and-expanding-a-cve.md)
+* [License](about/license.md)

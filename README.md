@@ -34,7 +34,7 @@ The goal of HardBreak ([https://www.hardbreak.wiki/](https://www.hardbreak.wiki/
     * What first target device to choose
     * Essential tools to start with
     * [Methodology](introduction/quickstart.md)
-    * A hands on [Case Study](introduction/case-study.md)
+    * A hands on [Case Study](introduction/case-study-led-to-a-cve-update/general-case-study.md)
 * [Hardware Hacking](broken-reference)
   * Top down approach to follow and investigate your device
     * [Basics](hardware-hacking/basics/) ([Hardware Tools](hardware-hacking/basics/tools/hardware-tools/), [Software](hardware-hacking/basics/tools/software-tools/) and [Common Hardware Components](hardware-hacking/basics/common-hardware-components.md))
