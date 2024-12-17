@@ -104,4 +104,4 @@
 * [Privacy Policy](about/privacy-policy.md)
 * [Datenschutzerklärung](about/datenschutzerklarung.md)
 * [License](about/license/README.md)
-  * [Case Study (and Expanding a CVE)](about/license/case-study-and-expanding-a-cve.md)
+  * [Case Study (Led to a CVE Update)](about/license/case-study-led-to-a-cve-update.md)
