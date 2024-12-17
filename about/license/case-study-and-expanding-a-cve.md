@@ -1,8 +1,8 @@
-# Work in Progress
+# Case Study (and Expanding a CVE)
 
-In this chapter we want to give an hands on example on how to hack your first IoT device and dive into hardware hacking.
+In this chapter we want to give an hands on example on how to hack your first IoT device and dive into hardware hacking.&#x20;
 
-I found this old Asus router in the basement, which was replaced a long time ago and was not of any use anymore. A perfect target for a hardware hacking experiment!
+I found this old Asus router in the basement, which was replaced a long time ago and was not of any use anymore. A perfect target for a hardware hacking experiment! The vulnerability was reported to Asus and they updated CVE-2024-28326 to include my Asus RT-N12 D1 model.
 
 ## Reconnaissance
 
@@ -24,7 +24,7 @@ Enough research! Let's take a look for ourselves and open the device.  Our goal 
 
 <figure><img src="../../.gitbook/assets/image (1) (1).png" alt="" width="375"><figcaption><p>Identified components</p></figcaption></figure>
 
-&#x20;As we can see next to the flash chip there are 4 connector pins. Using a multimeter, we can try to identify each of the pins performing a continuity test. For that we need test points for ground and power. We can use the GND and VCC pins of the flash chip as a reference, since we can look them up on the datasheet of the flash chip.
+As we can see next to the flash chip there are 4 connector pins. Using a multimeter, we can try to identify each of the pins performing a continuity test. For that we need test points for ground and power. We can use the GND and VCC pins of the flash chip as a reference, since we can look them up on the datasheet of the flash chip.
 
 <figure><img src="../../.gitbook/assets/image (82).png" alt=""><figcaption><p>Flash chip pinout</p></figcaption></figure>
 
@@ -38,7 +38,7 @@ To interact with the UART interface we need an UART-to-TTL USB adapter. We can t
 
 The final setup may look like this. Note I didn't bother to solder the GND pin, but just used a clip on the flash chip.
 
-<figure><img src="../../.gitbook/assets/uart.JPG" alt="" width="563"><figcaption><p>UART adapter connected</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/uart.JPG" alt="" width="375"><figcaption><p>UART adapter connected</p></figcaption></figure>
 
 Using minicom we set the baud rate to 115200 and power on the router. We immediately see the bootlog is printed out!&#x20;
 
@@ -239,3 +239,13 @@ Moreover after the router bootprocess is finished, the UART interface gives us a
 We can now analyze the router from the inside and check out running processes, installed programs etc. In case you forgot your router password, you can simply read it out in plaintext:
 
 <figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Example password read out</p></figcaption></figure>
+
+## Responsible Disclosure
+
+1. 09.11.2024 - Vulnerability reported under https://www.asus.com/securityadvisory/
+2. 18.11.2024  -  Received an email from Asus, asking me to update to latest firmware and retry
+3. 18.11.2024  -  Proved that vulnerability still exists in latest firmware and send details to Asus
+4. 17.12.2024  - Notice from Asus that vulnerability is accepted. CVE-2024-28326 was updated and Asus RT-N12 D1 router has been added
+
+
+
