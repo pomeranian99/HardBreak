@@ -1,26 +1,34 @@
-# Case Study (and Expanding a CVE)
+# Case Study (Led to a CVE Update)
 
-In this chapter we want to give an hands on example on how to hack your first IoT device and dive into hardware hacking.&#x20;
+In this chapter, we provide a practical example of how to hack your first IoT device and dive into the world of hardware hacking.
 
-I found this old Asus router in the basement, which was replaced a long time ago and was not of any use anymore. A perfect target for a hardware hacking experiment! The vulnerability was reported to Asus and they updated CVE-2024-28326 to include my Asus RT-N12 D1 model.
+I stumbled across an old **Asus RT-N12 D1 router** in my basement, which had been replaced long ago and was gathering dust. A perfect candidate for a hardware hacking experiment!\
+**Spoiler:** I successfully identified a vulnerability, which led to **Asus updating CVE-2024-28326** to include the RT-N12 D1 model.
 
 ## Reconnaissance
 
-#### OSINT
+#### _OSINT_
+
+The first step in any hardware hacking project is research. I started by Googling the router model number, **"ASUS RT-N12 D1"**, and came across an [article](https://redfoxsec.com/blog/asus-rt-n12-b1s-privilege-escalation-cve-2024-28326/) about a similar model, the **ASUS RT-N12+ B1**. The article mentioned that the device had an open **UART interface** allowing **unauthenticated root access**. However, it provided no exact details on how to exploit this or where the UART interface might be located. Could my router model have the same vulnerability?
 
 In the first step I googled the model number for my router "ASUS RT N12 D1" and I came accross this [article](https://redfoxsec.com/blog/asus-rt-n12-b1s-privilege-escalation-cve-2024-28326/). It shows that a similar model the  "ASUS RT N12+ B1" appears to have an open UART interface, which gives unauthenticated root access. It does not show how to exacltly abuse this or any details where to find the UART interface.  Let's see if our router model may have the same vulnerability!
 
-Moreover we find the FCC ID on the back of the router:
+To gather more information, I turned to the **FCC ID** printed on the back of the router:
 
 <figure><img src="../../.gitbook/assets/image (79).png" alt="" width="383"><figcaption><p>FCC ID</p></figcaption></figure>
 
-In the US every device, which provides RF communication like an router must have an FCC-ID. The Federal Communications Commission (FCC) will publish an report including internal pictures of each device. So we can take a look on internal pictures of the router without the need to open it!
+> In the United States, any device that uses RF communication, such as a router, must have an **FCC ID**. The Federal Communications Commission publishes detailed reports, including **internal photos** of devices. This allows us to inspect the internal hardware without even opening the device!
 
-As you can see there are 4 connector pads on the top right of the PCB. This layout is very typical for a UART interfaces, which often provides 4 pins (RX,TX,VCC,GND).
+Upon reviewing the FCC documentation, I noticed four connector pads on the top-right section of the PCB. This layout is very typical for a UART interface, which usually consists of four pins: RX, TX, VCC, and GND.
 
-#### Open the device
+#### _Open the device_
 
-Enough research! Let's take a look for ourselves and open the device.  Our goal is to identify components of interest, which might be storing chips like RAM or flash chips, debug ports and interfaces. It's always a good idea to take a  of your device and label component, which you could identify.
+With enough reconnaissance completed, it was time to open the router and take a closer look at the hardware. The primary goals were:
+
+* Identifying components of interest (e.g., flash chips, RAM).
+* Locating debug ports and interfaces.
+
+**Tip:** Always take photos of your device and label components as you identify them—this will help you stay organized.
 
 <figure><img src="../../.gitbook/assets/image (1) (1).png" alt="" width="375"><figcaption><p>Identified components</p></figcaption></figure>
 
@@ -34,13 +42,17 @@ Using this method we can easily identify GND and VCC. To distinguish TX and RX p
 
 ## Interface Interaction
 
-To interact with the UART interface we need an UART-to-TTL USB adapter. We can then connect the adpter accordingly. Make sure to connect RX to TX and TX to RX.
+To interact with the UART interface, I used a **USB-to-UART TTL adapter**. The connections were made as follows:
 
-The final setup may look like this. Note I didn't bother to solder the GND pin, but just used a clip on the flash chip.
+* **Router TX** → **Adapter RX**
+* **Router RX** → **Adapter TX**
+* **GND** → **Adapter GND**
+
+> Note: Instead of soldering the GND pin, I used a clip on the flash chip for simplicity.
 
 <figure><img src="../../.gitbook/assets/uart.JPG" alt="" width="375"><figcaption><p>UART adapter connected</p></figcaption></figure>
 
-Using minicom we set the baud rate to 115200 and power on the router. We immediately see the bootlog is printed out!&#x20;
+With everything connected, I used **Minicom** to set the baud rate to **115200** and powered on the router. Immediately, the **boot log** was printed!
 
 <details>
 
@@ -230,22 +242,34 @@ wanduck: delay 5 seconds before the first detect...
 
 </details>
 
-Moreover after the router bootprocess is finished, the UART interface gives us a unauthenticated root shell!
+Even better: once the router finished booting, the UART interface provided an **unauthenticated root shell**!
 
 <figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Post Exploitation
 
-We can now analyze the router from the inside and check out running processes, installed programs etc. In case you forgot your router password, you can simply read it out in plaintext:
+With root access, I could analyze the router’s internals:
+
+* Inspect running processes
+* Check installed programs
+* Retrieve sensitive information
+
+For example, if you ever forget your router’s password, you can simply read it in plaintext:
 
 <figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Example password read out</p></figcaption></figure>
 
 ## Responsible Disclosure
 
-1. 09.11.2024 - Vulnerability reported under https://www.asus.com/securityadvisory/
-2. 18.11.2024  -  Received an email from Asus, asking me to update to latest firmware and retry
-3. 18.11.2024  -  Proved that vulnerability still exists in latest firmware and send details to Asus
-4. 17.12.2024  - Notice from Asus that vulnerability is accepted. CVE-2024-28326 was updated and Asus RT-N12 D1 router has been added
+I responsibly reported the vulnerability to Asus, which led to the following timeline:
+
+* **09.11.2024** – Reported the vulnerability via [Asus Security Advisory](https://www.asus.com/securityadvisory/).
+* **18.11.2024** – Received an email from Asus suggesting I update to the latest firmware and retry. They also noted that the "_model has been End-of-Life (EOL) for several years and will no longer receive firmware maintenance_."
+* **18.11.2024** – Confirmed the vulnerability still exists in the latest firmware and submitted detailed findings to Asus.
+* **17.12.2024** – Asus acknowledged the vulnerability and updated **CVE-2024-28326** to include the **RT-N12 D1 router**.
+
+## Resources
+
+[https://nvd.nist.gov/vuln/detail/CVE-2024-28326#VulnChangeHistorySection](https://nvd.nist.gov/vuln/detail/CVE-2024-28326#VulnChangeHistorySection)
 
 
 
