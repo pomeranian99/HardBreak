@@ -65,7 +65,7 @@ To contribute:
 Reference the original source or blog whenever you include content from another author.
 {% endhint %}
 
-Check out our [Contribution Guide](contribute/how-to-contribute.md) for a step-by-step guide to making your first pull request!
+Check out our [Contribution Guide](contribute/how-to-contribute.md) for a step-by-step tutorial to making your first pull request!
 
 ## Important Disclaimers
 
