@@ -29,8 +29,8 @@ The goal of HardBreak ([https://www.hardbreak.wiki/](https://www.hardbreak.wiki/
 
 ## Overview
 
-* [Introduction](broken-reference)
-  * In this chapter we give you guidance on [how to start](introduction/how-to-start.md) hardware hacking:
+* [Introduction](hardware-hacking/introduction.md)
+  * In this chapter we give you guidance on how to start hardware hacking:
     * What first target device to choose
     * Essential tools to start with
     * [Methodology](introduction/quickstart.md)
