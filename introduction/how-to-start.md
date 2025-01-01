@@ -70,8 +70,8 @@ I recommend reading the following pages on how to approach your first hardware h
    1. You found and interesting chip or connector on the device? This section will explain standard protocols like UART, SPI, JTAG etc. and how we can interact with them&#x20;
 4. [Analyze Firmware](../hardware-hacking/analyze-firmware.md)
    1. You were able to dump the firmware? NICE WORK! Now it's time to analyze it, this section shows you what to do
-5. You want to take different approaches? Check out [Network Analysis](broken-reference) or [Radio Hacking](broken-reference)
-6. [Contribute](broken-reference)
+5. You want to take different approaches? Check out [Network Analysis](../network-analysis/introduction.md) or [Radio Hacking](../radio-hacking/introduction.md)
+6. [Contribute](../contribute/how-to-contribute.md)
    1. You may have come across a new proprietary protocol? Or you want to share the story on how you hacked your device? We would love to hear about it! This section will give you guidance on how you can support the hardware hacking community!
 
 Hardware hacking requires patience and persistence, but with the right approach, you can uncover fascinating aspects of how these devices work.
