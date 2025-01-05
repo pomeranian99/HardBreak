@@ -29,13 +29,13 @@ The goal of HardBreak ([https://www.hardbreak.wiki/](https://www.hardbreak.wiki/
 
 ## Overview
 
-* [Introduction](broken-reference)
+* [Introduction](introduction/how-to-start.md)
   * In this chapter we give you guidance on how to start hardware hacking:
     * What first target device to choose
     * Essential tools to start with
     * [Methodology](introduction/quickstart.md)
     * A hands on [Case Study](introduction/case-study-led-to-a-cve-update/general-case-study.md)
-* [Hardware Hacking](broken-reference)
+* [Hardware Hacking](/hardware-hacking/introduction.md)
   * Top down approach to follow and investigate your device
     * [Basics](hardware-hacking/basics/) ([Hardware Tools](hardware-hacking/basics/tools/hardware-tools/), [Software](hardware-hacking/basics/tools/software-tools/) and [Common Hardware Components](hardware-hacking/basics/common-hardware-components.md))
   * [Reconnaissance](hardware-hacking/reconnaissance/) ([OSINT](hardware-hacking/reconnaissance/closed-device/osint-search-the-web.md), [Board Analysis](hardware-hacking/reconnaissance/opened-device/board-analysis.md))
@@ -46,9 +46,9 @@ The goal of HardBreak ([https://www.hardbreak.wiki/](https://www.hardbreak.wiki/
   * [Bypass Security Mechanisms](hardware-hacking/bypassing-security/)
     * Introduction to [Voltage Glichting](hardware-hacking/bypassing-security/voltage-glitiching/)
   * How to [analyze Firmware](hardware-hacking/analyze-firmware.md)
-* [Network Analysis](broken-reference)
+* [Network Analysis](network-analysis/introduction.md)
   * How to analyze protocols: [Reverse Engineering ](network-analysis/protocols/application-layer/proprietary-protocols/parrot-anafi-drone-reverse-engineering.md)a drone
-* [Radio Hacking](broken-reference)
+* [Radio Hacking](radio-hacking/introduction.md)
   * Tools ([RTL-SDR](radio-hacking/tools/rf-signal-analyzers/rtl-sdr.md),[ Flipper Zero](radio-hacking/tools/flipper-zero/))
   * Protocols ([RFID](radio-hacking/protocols/rfid.md), [NFC](radio-hacking/tools/flipper-zero/nfc.md)) and how to hack them
 
