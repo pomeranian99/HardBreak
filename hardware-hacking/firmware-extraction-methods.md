@@ -1,7 +1,7 @@
 # Firmware Extraction Methods
-Firmware is the software embedded in a device's hardware, often critical for its operation. Extracting and analyzing it is crucial to gain an insight into the device and establish a foothold by analysing, through methods of reverse engineering, or modifying the firmware and reflashing a device.
+Firmware is the software embedded in a device's hardware, often critical for its operation. Extracting and analyzing it is crucial to understqnd the device's functionality and structure and establish a foothold by analysing, through methods of reverse engineering, or modifying the firmware and reflashing a device.
 
-But before you can start analyzing, reversing and establishing your foothold, you first need to obtain the firmware itself.
+But before you fire up [Binwalk](https://github.com/ReFirmLabs/binwalk) or [Ghidra](https://github.com/NationalSecurityAgency/ghidra) and start analyzing, reversing and establishing your foothold, you first need to obtain the firmware itself.
 
 Obtaining the firmware from devices can be done in several different ways.  Depending on the target device, firmware can be extracted through physical, semi-physical, or software-only methods. This page covers both invasive and non-invasive approaches.
 
@@ -13,7 +13,7 @@ These methods do not involve opening or physically tampering with the device and
 Manufacturers often host firmware files on their official websites for manual updates.
 
 #### Tools
-For this method there are no specific tools required, however you can benefit from a healthy knowledge on `google dorking` and other techniques detailed within the [Reconaissance](./reconnaissance/README.md) chapter
+For this method there are no specific tools required, however you can benefit from a proficiency in techniques such as `google dorking` and others detailed within the [Reconaissance](./reconnaissance/README.md) chapter
 
 #### Steps of retrieving the software from the Manufacturer Website 
 1. Search the vendor’s website or forums for downloadable firmware.
@@ -21,12 +21,14 @@ For this method there are no specific tools required, however you can benefit fr
 3. Verify the downloaded file’s integrity and match its expected format.
 
 {% hint style="warning" %}
-Be wary when downloading firmware from sources you do not trust 100%, always take precautionary measures when retrieving binaries or files in general from forums or website
+These firmware could be malicious or in unexpected formats. Be wary when downloading firmware from sources you do not trust 100%, always take precautionary measures when retrieving binaries or files in general from forums or website. 
 {% endhint %}
 
 
 ### MitM Attack on the Update Process
 Many devices update their firmware via OTA updates. Capturing these updates can provide the firmware file.
+
+Although many devices use HTTPS, complicating the process of intercepting, it is still possible if you are able to intercept the certificates
 
 #### Tools required
 - Packet capture tools (e.g., Wireshark) to monitor and intercept update traffic.
@@ -81,26 +83,45 @@ These methods involve opening the device and physically interacting with the com
 
 Use these invasive methods only when non-invasive methods fail, and you have permission to "break" the device.
 
+{% hint style="info" %}
+
+There is a fine line between the semi-invasive methods and the invasive methods, especially for the non-BGA packages. It might be possible to open up the device and read out the contents of a chip without desoldering anyting, but using something like a clip adapter. This adapter makes it possible to just apply it over the chip and already interact with the flash chip on the device without the need for desoldering.
+{% endhint %}
+
+{% hint style="warning" %}
+Do keep in mind that interacting in the way as described above, may power the chip when doing the actual reading, leading to possible loss of data, malfunction or unwanted behaviour.
+{% endhint %}
+
 ### Introduction to Chip Packages:
 Knowing what chip you have on the device is essential to knowing which reader and extraction method you may or may not need to use when you are attempting to perform a chip-off extraction. A few of the most common package types are listed below
+
+ToDo: add a note/guide on how to identify the chip type (datasheet, marking, visual)
 
 {% tabs %}
 {% tab title="TSOP Package" %}
     TSOP (Thin Small Outline Package): A type of rectangular IC package where pins extend outward on both sides. It is commonly used for flash memory chips.
 
-    different numbers ...
+    ToDo: add images and examples of different package sizes of TSOP packages
+    
 {% endtab %}
 
 {% tab title="QFP Package" %}
     QFP (Quad Flat Package): A flat, square IC package with pins extending on all four sides, ideal for high-density chip designs.  
 
-    different numbers ...
+    ToDo: add images and examples of different package sizes of QFP packages
 {% endtab %}
 
 {% tab title="BGA Package" %}
     BGA (Ball Grid Array): A package type with connections in the form of solder balls on the underside of the chip, allowing for higher pin density but requiring specialized tools for handling.
 
-    different numbers ...
+    ToDo: add images and examples of different package sizes of BGA Packages
+
+{% endtab %}
+
+{% tab title="UFS BGA Package" %}
+    UFS (Universal File Storage) chips use the BGA packaging style but are specifically designed for high-speed data storage applications like smartphones and automotive systems. They are complex to read out and require specialized readers to decode the more advanced protocols
+
+    ToDo: add images and examples of different package sizes of BGA Packages
 
 {% endtab %}
 {% endtabs %}
@@ -108,8 +129,44 @@ Knowing what chip you have on the device is essential to knowing which reader an
 
 
 ### Chip-Off Extraction of a QFP, TSOP, and Other Non-BGA Packages
-Non-BGA packages are generally easier to interface with. They are more straightforward
+Non-BGA packages are generally easier to desolder and interface with. They are less technically demanding and require minimal specialized equipment
+
+#### Tools:
+- Chip readers and programmers (e.g. Xgecu T56).
+- Hot air stations or chip removal tools.
+
+#### Steps to perform a chip-off extraction of a non-BGA package
+1. Desolder the chip using a hot air station or similar tool.
+2. Place the chip in a compatible reader and dump the contents.
+
+{% hint style="warning" %}
+- Ensure proper orientation and connection during the reading process. (possibly label the orientation)
+- Avoid overheating the chip to prevent data loss.
+{% endhint %}
 
 ### Chip-Off Extraction of a BGA-Package Flash Chip
+Performing a chip-off extraction with BGA-packaged flash chips require more advanced tools and expertise.
+
+#### Tools
+- Rework station with precise temperature control for BGA chip removal.
+- Soldering Flux
+- BGA chip readers and adapters.
+- Optional & Advanced: Infrared rework stations for precise temperature control.
+
+#### Steps to perform a chip-off extraction of a BGA package
+- Precaution: Preheat the board to reduce thermal stress.
+- Apply soldering flux to the area of the chip
+- Remove the BGA chip carefully using a rework station (with precise temperature control).
+- Use a specialized adapter to connect the chip to a reader and extract the data.
+
 
 ### Chip-Off Extraction of UFS Flash in BGA Package
+
+{% hint style="info" %}
+
+UFS Flash Chips are a newer counterpart to the eMMC chips that we usually see. as of this moment they are quite rare and require a dedicated programmer to read these out (e.g. [UFI-UFS Prog Tool Suite](https://www.ufi-box.com/pages/ufi-ufs-prog))
+
+
+{% endhint %}
+
+ToDo:  Add logical next blocks
