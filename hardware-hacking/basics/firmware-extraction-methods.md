@@ -43,7 +43,7 @@ Although many devices use HTTPS, complicating the process of intercepting, it is
 **Tools required**
 
 * Packet capture tools (e.g., Wireshark) to monitor and intercept update traffic.
-* Proxies (e.g., mitmproxy, [mitmrouter](https://github.com/nmatt0/mitmrouter)) to redirect and inspect update requests and device network traffic.
+* Proxies (e.g., mitmproxy, [mitmrouter](/hardware-hacking/basics/tools/software-tools/mitmrouter.md)) to redirect and inspect update requests and device network traffic.
 
 **Steps of a MitM attack on the OTA update process**
 
