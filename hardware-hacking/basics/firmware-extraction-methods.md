@@ -87,10 +87,10 @@ Depending on the interface that is exposed, various different tools might be req
 1. Locate debug interfaces on the device’s casing or accessible panels.
 2. Use appropriate tools and protocol to interact with the interface and extract the firmware as detailed within the various pages below:
 
-* UART
-* SPI
-* JTAG/SWD
-* I2C
+* [UART](/hardware-hacking/interface-interaction/uart/extract-firmware-using-uart.md)
+* [SPI](/hardware-hacking/interface-interaction/spi/extract-firmware-using-spi.md)
+* [JTAG/SWD](/hardware-hacking/interface-interaction/jtag-swd/extract-firmware-using-jtag-swd.md)
+* [I2C](/hardware-hacking/interface-interaction/i2c.md)
 
 ### Invasive Methods
 
