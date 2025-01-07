@@ -36,6 +36,7 @@
       * [Ghidra](hardware-hacking/basics/tools/software-tools/ghidra.md)
       * [OpenOCD](hardware-hacking/basics/tools/software-tools/openocd.md)
   * [Common Hardware Components](hardware-hacking/basics/common-hardware-components.md)
+  * [Firmware Extraction Methods](hardware-hacking/basics/firmware-extraction-methods.md)
 * [Reconnaissance](hardware-hacking/reconnaissance/README.md)
   * [Closed device](hardware-hacking/reconnaissance/closed-device/README.md)
     * [OSINT (search the web)](hardware-hacking/reconnaissance/closed-device/osint-search-the-web.md)
