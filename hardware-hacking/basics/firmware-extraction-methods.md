@@ -8,7 +8,7 @@ icon: browser
 
 Firmware is the software embedded in a device's hardware, often critical for its operation. Extracting and analyzing it is crucial to understqnd the device's functionality and structure and establish a foothold by analysing, through methods of reverse engineering, or modifying the firmware and reflashing a device.
 
-But before you fire up [Binwalk](https://github.com/ReFirmLabs/binwalk) or [Ghidra](https://github.com/NationalSecurityAgency/ghidra) and start analyzing, reversing and establishing your foothold, you first need to obtain the firmware itself.
+But before you fire up [Binwalk](/hardware-hacking/basics/tools/software-tools/binwalk.md) or [Ghidra](/hardware-hacking/basics/tools/software-tools/ghidra.md) and start analyzing, reversing and establishing your foothold, you first need to obtain the firmware itself.
 
 Obtaining the firmware from devices can be done in several different ways. Depending on the target device, firmware can be extracted through physical, semi-physical, or software-only methods. This page covers both invasive and non-invasive approaches.
 
@@ -80,7 +80,7 @@ These approaches require minimal physical interaction with the device but stop s
 Depending on the interface that is exposed, various different tools might be required:
 
 * USB-to-UART adapters.
-* Debugging software (e.g., OpenOCD for JTAG).
+* Debugging software (e.g., [OpenOCD](/hardware-hacking/basics/tools/software-tools/openocd.md) for JTAG).
 
 **Step to extracting the firmware through an exposed interface**
 
