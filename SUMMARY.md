@@ -35,6 +35,7 @@
       * [flashrom](hardware-hacking/basics/tools/software-tools/flashrom.md)
       * [Ghidra](hardware-hacking/basics/tools/software-tools/ghidra.md)
       * [OpenOCD](hardware-hacking/basics/tools/software-tools/openocd.md)
+      * [Mitmrouter](hardware-hacking/basics/tools/software-tools/mitmrouter.md)
   * [Common Hardware Components](hardware-hacking/basics/common-hardware-components.md)
   * [Firmware Extraction Methods](hardware-hacking/basics/firmware-extraction-methods.md)
 * [Reconnaissance](hardware-hacking/reconnaissance/README.md)
