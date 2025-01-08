@@ -27,6 +27,20 @@ _**This page is a free and open-source wiki about hardware hacking!**_
 
 The goal of HardBreak ([https://www.hardbreak.wiki/](https://www.hardbreak.wiki/)) is to collect knowledge about Hardware Hacking / IoT hacking in one place. There are many great blogs about Hardware Hacking, but it is a rather unpleasant experience to search through multiple blogs in different formats to find the information you need. HardBreak aims to organize all information in one accessible and easy-to-use platform.
 
+## Discord
+
+**🎉 We just launched our HardBreak Discord Server! 🎉**
+
+Join us here 👉 [**https://discord.gg/AWVsKxJHvQ**](https://discord.gg/AWVsKxJHvQ)
+
+If you:
+
+* Want to discuss hardware hacking and IoT security
+* Share the project you are working on
+* Have feedback or requests for new content on our wiki
+
+Come be a part of our growing community of hardware hackers⚡
+
 ## Overview
 
 * [Introduction](introduction/how-to-start.md)
@@ -35,7 +49,7 @@ The goal of HardBreak ([https://www.hardbreak.wiki/](https://www.hardbreak.wiki/
     * Essential tools to start with
     * [Methodology](introduction/quickstart.md)
     * A hands on [Case Study](introduction/case-study-led-to-a-cve-update/general-case-study.md)
-* [Hardware Hacking](/hardware-hacking/introduction.md)
+* [Hardware Hacking](hardware-hacking/introduction.md)
   * Top down approach to follow and investigate your device
     * [Basics](hardware-hacking/basics/) ([Hardware Tools](hardware-hacking/basics/tools/hardware-tools/), [Software](hardware-hacking/basics/tools/software-tools/) and [Common Hardware Components](hardware-hacking/basics/common-hardware-components.md))
   * [Reconnaissance](hardware-hacking/reconnaissance/) ([OSINT](hardware-hacking/reconnaissance/closed-device/osint-search-the-web.md), [Board Analysis](hardware-hacking/reconnaissance/opened-device/board-analysis.md))
