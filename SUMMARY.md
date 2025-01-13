@@ -61,6 +61,7 @@
 * [Bypassing Security](hardware-hacking/bypassing-security/README.md)
   * [Voltage Glitiching](hardware-hacking/bypassing-security/voltage-glitiching/README.md)
     * [Example: LPC1768](hardware-hacking/bypassing-security/voltage-glitiching/example-lpc1768.md)
+  * [Electromagnetic Fault Injection](hardware-hacking/bypassing-security/electromagnetic-fault-injection/README.md)
 * [Analyze Firmware](hardware-hacking/analyze-firmware.md)
 
 ## Network Analysis
