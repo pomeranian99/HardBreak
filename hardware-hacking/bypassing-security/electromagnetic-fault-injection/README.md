@@ -2,15 +2,13 @@
 
 ## **Theory**
 
-Electromagnetic Fault Injection (EMFI) is a type of fault injection attack where an attacker manipulates the current flowing inside a CPU with the help of electromagnetic induction. With the operations inside of an Integrated Circuit (IC) being controlled by the current flowing between and controlling the transistors, manipulating this current might result in faults being injected. EMFI is based on the physical principle of 'Electromagnetic Induction', which in itself is described through Faraday's law of induction. The law can be used to show how an electric circuit will produce a force known as electromagnetic
-induction when interacting with a magnetic field. In general, this means that by using magnetic fields, it is possible to induct a current into an electrical circuit.
+Electromagnetic Fault Injection (EMFI) is a type of fault injection attack where an attacker manipulates the current flowing inside a CPU with the help of electromagnetic induction. With the operations inside of an Integrated Circuit (IC) being controlled by the current flowing between and controlling the transistors, manipulating this current might result in faults being injected. EMFI is based on the physical principle of 'Electromagnetic Induction', which in itself is described through Faraday's law of induction. The law can be used to show how an electric circuit will produce a force known as electromagnetic induction when interacting with a magnetic field. In general, this means that by using magnetic fields, it is possible to induct a current into an electrical circuit.
 
 Manipulating the current flowing inside the IC poses a chance of changing certain registers or states and therefore allowing an attacker to tamper with the system. By sending a short, but strong current through a coil, it creates a magnetic field around said coil. Placing the coil above a chip then ideally induces a voltage in the IC of that chip. This potentially disrupts the normal execution flow of the processor or microcontroller. Based on the location and timing of the pulse, it allows an attacker to possibly induce faults and trigger unintended behaviour in the system.
 
 The effectivness of EMFI depends on the timing and duration of the sent pulse, the strenght of the magnetic field (which is related to the current running through the coil, and the parameters of the coil itself) and the location of the coil next to the chip.
 
 In contrast to other fault injection techniques, EMFI allows for glitching without necessarily having to tamper with the board itself. Other types of fault injection often require desoldering capacitors or decapsulating processors. With the coil being simply placed on top of the processor, manipulating the hardware of the board being attacked is usually not required.
-
 
 ## Usage
 
@@ -28,3 +26,7 @@ In contrast to other fault injection techniques, EMFI allows for glitching witho
 [https://circuitcellar.com/research-design-hub/electromagnetic-fault-injection/](https://circuitcellar.com/research-design-hub/electromagnetic-fault-injection/)\
 [https://www.ledger.com/blog/compact-em](https://www.ledger.com/blog/compact-em)\
 [https://hal.science/lirmm-01430913/](https://hal.science/lirmm-01430913/)
+
+## Page Contributors
+
+[https://github.com/Whit3rose](https://github.com/Whit3rose)
