@@ -126,7 +126,7 @@ The `strings` command can be helpful to quickly find sensitive data like passwor
     strings firmware.bin | grep -i 'port'
     ```
 
-## Analysis of bare matel firmware
+## Analysis of bare metal firmware
 
 Todo
 
