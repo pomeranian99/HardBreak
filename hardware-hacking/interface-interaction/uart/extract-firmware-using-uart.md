@@ -17,7 +17,7 @@ Press the [f] key and hit [enter] to enter failsafe mode
 Press the [1], [2], [3] or [4] key and hit [enter] to select the debug level  
 ```
 
-Pressing `F`  will give us a root shell:
+Pressing `F` will give us a root shell:
 
 <figure><img src="../../../.gitbook/assets/image (32).png" alt=""><figcaption><p>OpenWrt command command shell</p></figcaption></figure>
 
@@ -25,7 +25,7 @@ Depending on your device you may have to mount the correct filesystem first:
 
 * Run `ls /dev` or `blkid` to locate storage devices and partitions (e.g., `/dev/sda1`, `/dev/mmcblk0p2`).
 * Use these commands to first create a mount point and then mound the filesystem:
-  * &#x20;`mkdir /mnt/filesystem`
+  * `mkdir /mnt/filesystem`
   * `mount /dev/<root_partition> /mnt/filesystem`
 * Now you may access the filesystem under `/mnt/filesystem`
 
@@ -62,10 +62,10 @@ To dump the firmware, we can then use one of these options:
             ```
       2. check if IP Adress are saved: `printenv`
    3. Initialize the flash with `sf probe 0`.
-   4. Copy the flash contents to RAM (adjust offset and size):&#x20;
+   4. Copy the flash contents to RAM (adjust offset and size):
       1. `sf read <addr in RAM> <offset in flash> <size>`
       2. `sf read 0x82000000 0x0 0x1000000`. (=16MB in this case)
-   5. Transfer the data with TFTP:&#x20;
+   5. Transfer the data with TFTP:
       1. `tftp <addr> <filename> <size>`
       2. `tftp 0x82000000 firmware.bin 0x1000000`.
 2. We can also dump it in the console: (CAN BE SLOW!)
@@ -118,7 +118,7 @@ Ensure you verify the correct device paths to avoid overwriting important data. 
 ## Analyze firmware
 
 * Using `binwalk firmware.bin` we can try to analyze the firmware and extract sensitive information
-* check the "[Analyze Firmware](extract-firmware-using-uart.md#analyze-firmware)" chapter
+* check the "[Analyze Firmware](../../analyze-firmware.md)" chapter
 
 ## Resources
 
