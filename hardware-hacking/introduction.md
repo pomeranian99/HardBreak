@@ -22,7 +22,7 @@ The primary goal of a hardware hacker is typically to gain full control of the d
 
 * Interactive Access
   * Obtaining an administrative shell that allows full control of the device.
-* [Firmware Extraction](./firmware-extraction-methods.md)
+* [Firmware Extraction](basics/firmware-extraction-methods.md)
   * Dumping the device's firmware, which contains all the code and secrets required for operation. This can reveal admin passwords, hardcoded credentials, or security flaws.
 * Firmware Modification
   * Reflashing a device with modified firmware to bypass restrictions or gain privileged access.
@@ -36,7 +36,7 @@ After opening the device, the first step is identifying key hardware components 
 * Debug Interfaces (e.g., [UART](interface-interaction/uart/), [JTAG/SWD](interface-interaction/jtag-swd/))
   * These allow direct communication with the device, often providing admin-level access if unsecured.
 * Memory Chips (e.g., [SPI Flash](interface-interaction/spi/), EEPROM)
-  * &#x20;These store firmware and critical data, which can often be [extracted](interface-interaction/spi/extract-firmware-using-spi.md) and analyzed.
+  * These store firmware and critical data, which can often be [extracted](interface-interaction/spi/extract-firmware-using-spi.md) and analyzed.
 * Communication Lines (e.g.,[ I2C](interface-interaction/i2c.md), [SPI](interface-interaction/spi/), [UART](interface-interaction/uart/))
   * Sniffing these can reveal unencrypted data in transit, such as credentials or sensitive commands. This can be done by using a [logic analyzer](basics/tools/hardware-tools/logic-analyzer/).
 
@@ -56,4 +56,3 @@ The content of this wiki has a top to button approach, so you can just follow th
   Take your skills to the next level with advanced techniques for bypassing security mechanisms. Learn approaches to overcome challenges like read-out protections on chips and explore topics like **side-channel attacks** for deeper hardware penetration.
 * [_**Analyze Firmware**_](analyze-firmware.md)\
   Once you’ve extracted firmware, this chapter guides you through analyzing it using tools like **binwalk** to uncover vulnerabilities, hardcoded secrets, and sensitive information.
-
